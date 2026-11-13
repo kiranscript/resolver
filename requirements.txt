@@ -1,0 +1,9 @@
+# Local environment (Python 3.12, uv venv). Kaggle installs its own; see kaggle/level1/build.py.
+datasets==5.2.0
+pyarrow==26.0.1
+pandas==3.1.1
+numpy==2.5.4
+torch==2.15.0
+transformers==5.22.2
+accelerate==1.15.0
+bitsandbytes==0.50.2

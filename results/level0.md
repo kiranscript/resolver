@@ -6,7 +6,7 @@ Date: 2026-11-13. Reproduce with `scripts/fetch_data.sh && .venv/bin/python scri
 - Merge-Bench release `main`, asset `merges.tar.gz` (sha256 in `scripts/fetch_data.sh`).
 - Java test split: **806 hunks**. Java train split: **3,424 hunks** (ships with the release).
 - Hunks are **two-way** (`<<<<<<<` / `=======` / `>>>>>>>`), not diff3: 0 of 806 contain `|||||||`. There is no base side.
-- **50 of 806** test hunks contain more than one conflict. 12 test questions are duplicates of another test question.
+- Every hunk has exactly one complete conflict. **79 of 806** also carry unpaired markers (stray halves of neighbouring conflicts in the 20-line context window); the developer's answer keeps them. 12 test questions duplicate another test question.
 - The dataset carries no repository id per hunk (only `question`, `answer`, `prompt`).
 
 ## Licenses
@@ -21,14 +21,23 @@ fine for research use here; **this is an assumption, not a verified clearance.**
   else equal after dropping comments and collapsing whitespace, else conflict markers present).
 
 ## Trivial baselines (the floor)
-| Strategy | Test 806 exact | + normalised | Left conflict | Sample 200 exact |
+| Strategy | Test 806 exact | + normalised | Left conflict* | Sample 200 exact |
 |---|---|---|---|---|
 | untouched conflict | 0.0% | 1.4% | 98.6% | 0.0% |
-| take left (HEAD) | 32.0% | 40.2% | 4.5% | 31.5% |
-| **take right** | **42.6%** | 49.8% | 2.9% | 41.0% |
-| both, left first | 19.4% | 25.8% | 5.3% | 17.0% |
-| both, right first | 17.2% | 23.3% | 5.3% | 17.0% |
+| take left (HEAD) | 33.7% | 42.2% | 7.6% | 33.0% |
+| **take right** | **45.7%** | 53.0% | 4.7% | 44.0% |
+| both, left first | 20.2% | 26.7% | 9.6% | 18.0% |
+| both, right first | 18.1% | 24.2% | 9.6% | 18.5% |
 | take base | not available (no base side in the data) | | | |
+
+*Caveat on "left conflict": Merge-Bench's bucket fires on any marker substring. 93 of 806 *reference* answers contain
+markers themselves (85 stray line-start markers from context, 8 `// =====` comment rulers), so this bucket over-counts
+"declined" by up to ~11% of hunks. It is kept for paper comparability. `scoring.declined_strict` (more `<<<<<<<` lines than the
+reference) is the stricter test; use it when analysing "declined" in Levels 1 and 3.
+
+Fixed after review (Fable, commit 15dee37): the first resolver dropped a dangling `<<<<<<<` at the end of the snippet, which
+understated take-right at 42.6% (now 45.7%). Scorer verified against Merge-Bench's real `merged_conflict_reward` on 12,090 cases
+(five trivial strategies plus ten perturbations per hunk): 0 mismatches.
 
 ## Gate result
 Data and scorer usable, licenses permissive: **passed**.

@@ -25,7 +25,7 @@ dump(test, ROOT / "data/test806.jsonl")
 dump(train, ROOT / "data/train3424.jsonl")
 
 ids = sorted(random.Random(SEED).sample(range(len(test)), SAMPLE_N))
-(ROOT / "data/sample200_ids.json").write_text(json.dumps(ids))
+(ROOT / "results/sample200_ids.json").write_text(json.dumps(ids))
 print(f"test={len(test)} train={len(train)} sample={len(ids)} seed={SEED}")
 
 # ---- Level 0 verification: reference -> 100%, untouched -> 0% ------------

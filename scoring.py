@@ -76,9 +76,10 @@ def _snippet_parts(question):
 def _resolve_lines(snippet, strategy):
     """Line-based resolver; handles empty sides and multiple conflicts."""
     out, side, left, right = [], None, [], []
+    open_marker = None
     for line in snippet.split("\n"):
         if side is None and line.startswith("<<<<<<<"):
-            side, left, right = "L", [], []
+            side, left, right, open_marker = "L", [], [], line
         elif side == "L" and line.startswith("======="):
             side = "R"
         elif side == "R" and line.startswith(">>>>>>>"):
@@ -99,7 +100,21 @@ def _resolve_lines(snippet, strategy):
             right.append(line)
         else:
             out.append(line)
+    if side is not None:
+        # Dangling half-conflict from the context window (the developer's answer keeps it): emit verbatim.
+        out += [open_marker] + left + (["======="] + right if side == "R" else [])
     return "\n".join(out)
+
+
+def declined_strict(code, reference):
+    """Stricter 'left the conflict' test: more line-anchored `<<<<<<<` markers than the reference has.
+
+    Merge-Bench's own bucket (`conflict`) fires on any marker substring, and ~12% of reference answers
+    contain stray markers from neighbouring conflicts or `// =====` comment rulers, so it over-counts.
+    """
+    def n(t):
+        return sum(1 for l in t.split("\n") if l.startswith("<<<<<<<"))
+    return n(code) > n(reference)
 
 
 def trivial_resolve(question, strategy):
