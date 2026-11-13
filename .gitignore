@@ -1,0 +1,7 @@
+.venv/
+data/
+vendor/
+__pycache__/
+*.pyc
+kaggle/level1/build/
+kaggle/level1/out/
