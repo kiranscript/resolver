@@ -41,5 +41,5 @@ understated take-right at 42.6% (now 45.7%). Scorer verified against Merge-Bench
 
 ## Gate result
 Data and scorer usable, licenses permissive: **passed**.
-**Finding:** "always take the right side" scores 42.6%. That is the floor any real result must clear, and it is
+**Finding:** "always take the right side" scores **45.7%**. That is the floor any real result must clear, and it is
 above untuned Qwen3 14B (12.9%) and close to LLMergeJ 14B (48.8%) in the paper's table.
