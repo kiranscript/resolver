@@ -122,3 +122,57 @@ def trivial_resolve(question, strategy):
     snippet = _snippet_parts(question)
     resolved = snippet if strategy == "untouched" else _resolve_lines(snippet, strategy)
     return "```java\n" + resolved.rstrip("\n") + "\n```"
+
+
+# --- side swap (Level 2/3) --------------------------------------------------
+
+def swap_sides(question):
+    """Swap the contents of the first complete conflict's two sides, keeping the marker lines in place.
+
+    The developer's resolution does not depend on which side is printed first, so `answer` is unchanged.
+    Used to (a) remove the left/right orientation prior from training data and (b) build an
+    orientation-neutral dev set. Stray half-conflicts in the context are left alone.
+    """
+    start = question.index("```java\n") + len("```java\n")
+    end = question.rindex("\n```")
+    lines = question[start:end].split("\n")
+    i_open = i_mid = i_close = None
+    for i, l in enumerate(lines):
+        if i_open is None and l.startswith("<<<<<<<"):
+            i_open = i
+        elif i_open is not None and i_mid is None and l.startswith("======="):
+            i_mid = i
+        elif i_mid is not None and l.startswith(">>>>>>>"):
+            i_close = i
+            break
+        elif i_mid is None and i_open is not None and l.startswith("<<<<<<<"):
+            i_open = i  # an earlier '<<<<<<<' was a stray half; restart at this one
+    if i_close is None:
+        return question
+    left, right = lines[i_open + 1:i_mid], lines[i_mid + 1:i_close]
+    new = lines[:i_open + 1] + right + [lines[i_mid]] + left + lines[i_close:]
+    return question[:start] + "\n".join(new) + question[end:]
+
+
+def can_swap(question):
+    """True when swap_sides is safe: it changes the text, is its own inverse, and exchanges take-left/take-right."""
+    s = swap_sides(question)
+    return (s != question and swap_sides(s) == question
+            and trivial_resolve(s, "left") == trivial_resolve(question, "right")
+            and trivial_resolve(s, "right") == trivial_resolve(question, "left"))
+
+
+def swap_example(question, answer):
+    """Side-swapped copy of an example. Returns (question, answer) or None when the swap is unsafe.
+
+    The developer's answer is order-independent except when it is exactly a concatenation of the two sides
+    (left+right or right+left); then it is re-derived in the new display order so the target stays
+    "concatenate in the order shown".
+    """
+    if not can_swap(question):
+        return None
+    s = swap_sides(question)
+    for strat in ("both", "both_reversed"):
+        if extract_code_block(trivial_resolve(question, strat)) == answer.strip():
+            return s, extract_code_block(trivial_resolve(s, strat))
+    return s, answer
