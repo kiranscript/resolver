@@ -27,6 +27,10 @@ CONFIGS = {
     "higha": {"n": None, "ids": ids, "variants": ["A"], "rows": ["k2_high"],
               "max_new": {"k2_high": 4096}, "retry_max_new": {"k2_high": 16384}, "retry_bs": 3,
               "bs": {"k2_high": 10}},
+    # Level 3 baselines on the orientation-neutral dev set (data from the private dataset kiranscript/resolver-data).
+    "devsym": {"n": None, "ids": [], "items_path": "/kaggle/input/resolver-data/dev_sym.jsonl", "variants": ["B"],
+               "rows": ["qwen_nothink", "k2_low"],
+               "max_new": {"qwen_nothink": 1280, "k2_low": 1280}, "bs": {"qwen_nothink": 16, "k2_low": 16}},
     "highb": {"n": None, "ids": ids, "variants": ["B"], "rows": ["k2_high"],
               "max_new": {"k2_high": 4096}, "retry_max_new": {"k2_high": 16384}, "retry_bs": 3,
               "bs": {"k2_high": 10}},
@@ -56,6 +60,6 @@ out.mkdir(parents=True, exist_ok=True)
     "is_private": True,
     "enable_gpu": True,
     "enable_internet": True,
-    "dataset_sources": [], "competition_sources": [], "kernel_sources": [], "model_sources": [],
+    "dataset_sources": ["kiranscript/resolver-data"] if cfg.get("items_path") else [], "competition_sources": [], "kernel_sources": [], "model_sources": [],
 }, indent=1))
 print("built", out)

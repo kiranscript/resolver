@@ -5,3 +5,6 @@ __pycache__/
 *.pyc
 kaggle/level1/build/
 kaggle/level1/out/
+kaggle/dataset/
+kaggle/level3/build/
+kaggle/level3/out/

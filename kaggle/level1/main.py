@@ -48,7 +48,22 @@ def log(*a):
     print(time.strftime("%H:%M:%S"), *a, flush=True)
 
 
-def load_data(work, ids):
+def resolve_items_path(p):
+    import glob
+    if os.path.exists(p):
+        return p
+    hits = glob.glob("/kaggle/input/**/" + os.path.basename(p), recursive=True)
+    if not hits:
+        raise FileNotFoundError(p)
+    return hits[0]
+
+
+def load_data(work, ids, items_path=None):
+    if items_path:
+        items_path = resolve_items_path(items_path)  # custom item file (jsonl with id/question/answer), e.g. Level 3's dev_sym
+        rows = [json.loads(l) for l in open(items_path)]
+        keep = set(ids)
+        return [{"id": r["id"], "question": r["question"], "answer": r["answer"]} for r in rows if r["id"] in keep]
     work.mkdir(parents=True, exist_ok=True)
     tar = work / "merges.tar.gz"
     if not (work / "merges").exists():
@@ -248,7 +263,11 @@ def parse_cfg():
     on_kaggle = os.path.exists("/kaggle/working")
     cfg["out"] = args.out or ("/kaggle/working/out" if on_kaggle else "out")
     cfg["work"] = args.work or ("/kaggle/working/data" if on_kaggle else "work")
-    cfg["ids"] = cfg.get("ids") or json.load(open(args.ids_file))
+    if cfg.get("items_path"):
+        cfg["items_path"] = resolve_items_path(cfg["items_path"])
+        cfg["ids"] = [json.loads(l)["id"] for l in open(cfg["items_path"])]
+    else:
+        cfg["ids"] = cfg.get("ids") or json.load(open(args.ids_file))
     n = cfg.get("n", args.n)
     if n:
         cfg["ids"] = cfg["ids"][:n]
@@ -313,7 +332,7 @@ def main():
     cfg = parse_cfg()
     out_dir = Path(cfg["out"]); out_dir.mkdir(parents=True, exist_ok=True)
     work = Path(cfg["work"])
-    items = load_data(work, cfg["ids"])
+    items = load_data(work, cfg["ids"], cfg.get("items_path"))
 
     if cfg["shard"]:  # child: one GPU, a slice of the hunks
         k, n = map(int, cfg["shard"].split("/"))

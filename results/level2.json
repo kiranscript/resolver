@@ -43,7 +43,7 @@
  },
  "largest_merge_share_of_dev_pct": 4.934210526315789,
  "dev_sym": 607,
- "dev_swapped_answer_reordered": 48,
+ "dev_swapped_answer_reordered": 21,
  "trivial_exact_pct": {
   "train_clean": {
    "left": 43.0,

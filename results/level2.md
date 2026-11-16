@@ -48,8 +48,8 @@ at 98% left, 120 at 100% left, 75 at 84% right. Test: a 100-hunk merge at 98% le
 ## Decisions carried into the later levels
 1. **Train side-agnostic.** `scoring.swap_example` swaps the two sides' contents (markers stay in place). If the developer answer is
    exactly left+right (or right+left), it is re-derived in the new order, so the target stays "concatenate in the order shown"; all other
-   answers are unchanged. `can_swap` refuses hunks with nested or duplicated markers. Level 3 trains on each hunk in both orientations.
-2. **Orientation-neutral dev.** `data/dev_sym.jsonl` = 304 dev hunks + their swapped copies (607 items; 48 swapped answers re-ordered).
+   answers are unchanged. `can_swap` refuses hunks with nested or duplicated markers. Level 3 trains each hunk in one random orientation (p = 0.5 swapped).
+2. **Orientation-neutral dev.** `data/dev_sym.jsonl` = 304 dev hunks + their swapped copies (607 items; 21 swapped answers re-ordered).
    Take-left = take-right = **27.2%** there; Level 3's "beat the trivial floor" gate uses this number.
 3. **Level 4 needs a cluster-aware test.** Test hunks cluster in 196 merge SHAs with near-constant orientation; resample by merge SHA
    (cluster bootstrap), not by hunk.

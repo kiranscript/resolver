@@ -173,6 +173,18 @@ def swap_example(question, answer):
         return None
     s = swap_sides(question)
     for strat in ("both", "both_reversed"):
-        if extract_code_block(trivial_resolve(question, strat)) == answer.strip():
-            return s, extract_code_block(trivial_resolve(s, strat))
+        if _resolve_lines(_snippet_parts(question), strat).strip() == answer.strip():
+            # raw (unstripped) text: stripping would drop the first line's indentation
+            return s, _resolve_lines(_snippet_parts(s), strat).rstrip("\n") + "\n"
     return s, answer
+
+
+def merge_sha(question):
+    """40-hex merge SHA from the conflict labels (the best available repo/merge id), or None."""
+    import re
+    for line in question.split("\n"):
+        if line.startswith(("<<<<<<<", ">>>>>>>")):
+            m = re.search(r"\b[0-9a-f]{40}\b", line)
+            if m:
+                return m.group(0)
+    return None
