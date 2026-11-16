@@ -201,7 +201,132 @@ def evaluate(model, tok, rows, fmt, max_new, bs, out_path):
     return s
 
 
+def find_adapter(name):
+    import glob
+    for root in ([str(CODE)] if LOCAL else ["/kaggle/input"]):
+        hits = glob.glob(f"{root}/**/{name}/adapter_config.json", recursive=True) or \
+               glob.glob(f"{root}/**/adapter_config.json", recursive=True)  # flat adapter dataset
+        if hits:
+            return str(Path(hits[0]).parent)
+    print("input tree:", glob.glob("/kaggle/input/**", recursive=True)[:40], flush=True)
+    raise FileNotFoundError(name)
+
+
+def nvidia_smi_used_mb():
+    try:
+        out = subprocess.check_output(["nvidia-smi", "--query-gpu=memory.used", "--format=csv,noheader,nounits"], text=True)
+        return [int(x) for x in out.split()]
+    except Exception:
+        return None
+
+
+def run_eval_only(cfg, out_dir, smoke):
+    """Load base (4-bit) + a saved adapter, score cfg['eval_file'], and measure inference memory at batch size 1."""
+    import torch
+    from peft import PeftModel
+    out_dir.mkdir(parents=True, exist_ok=True)
+    name = cfg["name"]
+    log("=== eval-only", cfg)
+    torch.cuda.reset_peak_memory_stats()
+    tok, model = load_4bit()
+    base_alloc = torch.cuda.memory_allocated() / 1e9
+    model = PeftModel.from_pretrained(model, cfg["adapter_path"] if "adapter_path" in cfg else find_adapter(cfg["adapter"]))
+    model.eval()
+    load_alloc = torch.cuda.memory_allocated() / 1e9
+    rows = read_jsonl(DATA / cfg["eval_file"])
+    if smoke or cfg.get("eval_limit"):
+        rows = rows[: (12 if smoke else cfg["eval_limit"])]
+    res = {"config": cfg, "mem": {"base_4bit_allocated_gb": base_alloc, "base_plus_adapter_allocated_gb": load_alloc,
+                                   "trainable_adapter_params": sum(p.numel() for p in model.parameters() if p.requires_grad)}}
+    # --- memory at batch size 1 on the longest prompt (prompts only; no labels are looked at)
+    mem_rows = read_jsonl(DATA / cfg.get("mem_file", cfg["eval_file"]))
+    longest = max(mem_rows, key=lambda r: len(tok(chat_prompt(tok, make_prompt(cfg["format"], r["question"]))).input_ids))
+    enc = tok([chat_prompt(tok, make_prompt(cfg["format"], longest["question"]))], return_tensors="pt", add_special_tokens=False).to("cuda")
+    torch.cuda.reset_peak_memory_stats()
+    with torch.no_grad():
+        model.generate(**enc, max_new_tokens=cfg.get("max_new", 768), do_sample=False,
+                       eos_token_id=[tok.convert_tokens_to_ids("<|im_end|>")], pad_token_id=tok.pad_token_id)
+    res["mem"].update({"longest_prompt_tokens": int(enc["input_ids"].shape[1]),
+                       "bs1_peak_allocated_gb": torch.cuda.max_memory_allocated() / 1e9,
+                       "bs1_peak_reserved_gb": torch.cuda.max_memory_reserved() / 1e9,
+                       "nvidia_smi_used_mb_after_bs1": nvidia_smi_used_mb()})
+    log("MEM", json.dumps(res["mem"]))
+    # --- scoring pass at the configured batch size
+    res["eval"] = evaluate(model, tok, rows, cfg["format"], cfg.get("max_new", 768), cfg.get("eval_bs", 16),
+                           out_dir / f"{name}.jsonl")
+    (out_dir / f"{name}.json").write_text(json.dumps(res, indent=1))
+    log("RESULT", json.dumps(res))
+    del model, tok; gc.collect(); torch.cuda.empty_cache()
+    return res
+
+
+def run_memdiag(cfg, out_dir, smoke):
+    """Staged inference-memory diagnostic at batch size 1 (longest prompt in cfg['mem_file']); prompts only, no labels."""
+    import torch
+    from peft import PeftModel
+    out_dir.mkdir(parents=True, exist_ok=True)
+    res = {"torch": torch.__version__, "gpu": torch.cuda.get_device_name(0), "cc": torch.cuda.get_device_capability(0)}
+    try:
+        import transformers, fla, triton, bitsandbytes
+        res.update(transformers=transformers.__version__, fla=fla.__version__, triton=triton.__version__, bnb=bitsandbytes.__version__)
+    except Exception as e:
+        res["version_error"] = repr(e)
+    tok, model = load_4bit()
+    res["base_allocated_gb"] = torch.cuda.memory_allocated() / 1e9
+    model = PeftModel.from_pretrained(model, cfg["adapter_path"] if "adapter_path" in cfg else find_adapter(cfg["adapter"]))
+    model.eval()
+    res["with_adapter_allocated_gb"] = torch.cuda.memory_allocated() / 1e9
+    rows = read_jsonl(DATA / cfg["mem_file"])
+    longest = max(rows, key=lambda r: len(tok(chat_prompt(tok, make_prompt(cfg["format"], r["question"]))).input_ids))
+    enc = tok([chat_prompt(tok, make_prompt(cfg["format"], longest["question"]))], return_tensors="pt", add_special_tokens=False).to("cuda")
+    eos = [tok.convert_tokens_to_ids("<|im_end|>")]
+
+    def peak(label, fn):
+        torch.cuda.synchronize(); torch.cuda.empty_cache(); torch.cuda.reset_peak_memory_stats()
+        base = torch.cuda.memory_allocated()
+        fn()
+        torch.cuda.synchronize()
+        res[label] = {"peak_allocated_gb": torch.cuda.max_memory_allocated() / 1e9,
+                      "transient_over_start_gb": (torch.cuda.max_memory_allocated() - base) / 1e9,
+                      "reserved_gb": torch.cuda.max_memory_reserved() / 1e9}
+        log("MEMDIAG", label, json.dumps(res[label]))
+
+    gen = lambda n, **kw: (lambda: model.generate(**enc, max_new_tokens=n, do_sample=False, eos_token_id=eos,
+                                                  pad_token_id=tok.pad_token_id, **kw))
+    peak("prefill_only_max_new_1", gen(1))
+    peak("full_generate_768", gen(768))
+    peak("full_generate_768_again", gen(768))
+    peak("generate_explicit_logits_to_keep_1", gen(768, logits_to_keep=1))
+
+    def forward_only():  # plain prefill forward, logits for the last position only
+        with torch.no_grad():
+            model(input_ids=enc["input_ids"], attention_mask=enc["attention_mask"], logits_to_keep=1)
+    peak("forward_logits_to_keep_1", forward_only)
+
+    def forward_full():  # prefill forward computing logits for all positions
+        with torch.no_grad():
+            model(input_ids=enc["input_ids"], attention_mask=enc["attention_mask"])
+    peak("forward_full_logits", forward_full)
+    # chunked prefill: feed the prompt in 128-token pieces with a growing cache
+    def chunked():
+        with torch.no_grad():
+            ids, past = enc["input_ids"], None
+            for i in range(0, ids.shape[1], 128):
+                o = model(input_ids=ids[:, i:i + 128], past_key_values=past, use_cache=True, logits_to_keep=1)
+                past = o.past_key_values
+    try:
+        peak("chunked_prefill_128", chunked)
+    except Exception as e:
+        res["chunked_prefill_128"] = {"error": repr(e)[:300]}
+    (out_dir / f"{cfg['name']}.json").write_text(json.dumps(res, indent=1))
+    log("RESULT", json.dumps(res))
+
+
 def run_config(cfg, out_dir, smoke):
+    if cfg.get("mode") == "memdiag":
+        return run_memdiag(cfg, out_dir, smoke)
+    if cfg.get("mode") == "eval":
+        return run_eval_only(cfg, out_dir, smoke)
     import torch
     out_dir.mkdir(parents=True, exist_ok=True)
     name = cfg["name"]
@@ -235,6 +360,14 @@ def main():
     args = ap.parse_args()
     out_dir = Path(args.out or ("out_l3" if LOCAL else "/kaggle/working/out"))
     if args.smoke:
+        if os.environ.get("MEMDIAG_ADAPTER"):
+            run_config({"name": "memdiag", "mode": "memdiag", "format": "resolution", "adapter_path": os.environ["MEMDIAG_ADAPTER"],
+                        "mem_file": "test806.jsonl"}, out_dir, True)
+            return
+        if os.environ.get("EVAL_ADAPTER"):
+            run_config({"name": "smoke_eval", "mode": "eval", "format": "resolution", "adapter_path": os.environ["EVAL_ADAPTER"],
+                        "eval_file": "dev_sym.jsonl", "mem_file": os.environ.get("MEM_FILE", "dev_sym.jsonl")}, out_dir, True)
+            return
         run_config({"name": "smoke", "format": os.environ.get("FMT", "resolution"), "rank": 8, "lr": 2e-4}, out_dir, True)
         return
     if args.configs:  # child: run its configs sequentially on CUDA_VISIBLE_DEVICES's GPU

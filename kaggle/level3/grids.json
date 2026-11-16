@@ -35,5 +35,37 @@
     "max_train_minutes": 60
    }
   ]
+ },
+ "l4qwen": {
+  "max_gpus": 1,
+  "configs": [
+   {
+    "name": "qwen_r2_test",
+    "mode": "eval",
+    "adapter": "r2_res_r16_lr2e-4_adapter",
+    "eval_file": "test806.jsonl",
+    "format": "resolution",
+    "eval_bs": 16,
+    "max_new": 768
+   }
+  ],
+  "extra_datasets": [
+   "kiranscript/resolver-adapter"
+  ]
+ },
+ "l4mem": {
+  "max_gpus": 1,
+  "extra_datasets": [
+   "kiranscript/resolver-adapter"
+  ],
+  "configs": [
+   {
+    "name": "memdiag",
+    "mode": "memdiag",
+    "adapter": "r2_res_r16_lr2e-4_adapter",
+    "format": "resolution",
+    "mem_file": "test806.jsonl"
+   }
+  ]
  }
 }

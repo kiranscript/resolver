@@ -1,0 +1,213 @@
+{
+ "rows": [
+  {
+   "row": "qwen_finetuned_r2",
+   "n": 806,
+   "exact_pct": 45.03722084367246,
+   "exact_or_normalized_pct": 53.225806451612904,
+   "conflict_pct": 6.823821339950372,
+   "wrong": 322,
+   "no_block": 0
+  },
+  {
+   "row": "k2_high_B_strict",
+   "n": 806,
+   "exact_pct": 33.99503722084367,
+   "exact_or_normalized_pct": 45.78163771712159,
+   "conflict_pct": 0.7444168734491315,
+   "wrong": 418,
+   "no_block": 13
+  },
+  {
+   "row": "k2_high_B_lenient",
+   "n": 806,
+   "exact_pct": 34.49131513647643,
+   "exact_or_normalized_pct": 46.27791563275434,
+   "conflict_pct": 0.7444168734491315,
+   "wrong": 418,
+   "no_block": 9
+  },
+  {
+   "row": "trivial_left",
+   "n": 806,
+   "exact_pct": 33.7468982630273,
+   "exact_or_normalized_pct": 42.18362282878412,
+   "conflict_pct": 7.568238213399503,
+   "wrong": 405,
+   "no_block": 0
+  },
+  {
+   "row": "trivial_right",
+   "n": 806,
+   "exact_pct": 45.6575682382134,
+   "exact_or_normalized_pct": 52.977667493796524,
+   "conflict_pct": 4.714640198511166,
+   "wrong": 341,
+   "no_block": 0
+  },
+  {
+   "row": "qwen_untuned_B",
+   "n": 806,
+   "exact_pct": 16.997518610421835,
+   "exact_or_normalized_pct": 23.200992555831267,
+   "conflict_pct": 18.610421836228287,
+   "wrong": 444,
+   "no_block": 25
+  },
+  {
+   "row": "k2_low_B_lenient",
+   "n": 806,
+   "exact_pct": 28.535980148883375,
+   "exact_or_normalized_pct": 39.826302729528535,
+   "conflict_pct": 1.2406947890818858,
+   "wrong": 430,
+   "no_block": 45
+  }
+ ],
+ "n_clusters": 196,
+ "comparisons": {
+  "qwen_finetuned_r2 - k2_high_B_lenient": {
+   "n": 806,
+   "diff_pts": 10.54590570719603,
+   "ci95_cluster": [
+    5.401234567901234,
+    15.206185567010309
+   ],
+   "a_only": 185,
+   "b_only": 100,
+   "mcnemar_p": 5.402671058641111e-07
+  },
+  "qwen_finetuned_r2 - k2_high_B_strict": {
+   "n": 806,
+   "diff_pts": 11.042183622828784,
+   "ci95_cluster": [
+    5.9815950920245395,
+    15.763546798029557
+   ],
+   "a_only": 187,
+   "b_only": 98,
+   "mcnemar_p": 1.4882661473037924e-07
+  },
+  "qwen_finetuned_r2 - trivial_right": {
+   "n": 806,
+   "diff_pts": -0.6203473945409429,
+   "ci95_cluster": [
+    -17.83893985728848,
+    17.5531914893617
+   ],
+   "a_only": 185,
+   "b_only": 190,
+   "mcnemar_p": 0.8363886545141771
+  },
+  "qwen_finetuned_r2 - trivial_left": {
+   "n": 806,
+   "diff_pts": 11.290322580645162,
+   "ci95_cluster": [
+    -4.949238578680203,
+    25.570776255707763
+   ],
+   "a_only": 205,
+   "b_only": 114,
+   "mcnemar_p": 3.934419036107046e-07
+  },
+  "qwen_finetuned_r2 - qwen_untuned_B": {
+   "n": 806,
+   "diff_pts": 28.03970223325062,
+   "ci95_cluster": [
+    23.076923076923077,
+    32.33644859813084
+   ],
+   "a_only": 256,
+   "b_only": 30,
+   "mcnemar_p": 6.96447979415046e-46
+  },
+  "qwen_finetuned_r2 - k2_low_B_lenient": {
+   "n": 806,
+   "diff_pts": 16.501240694789082,
+   "ci95_cluster": [
+    11.443433029908972,
+    20.838627700127066
+   ],
+   "a_only": 204,
+   "b_only": 71,
+   "mcnemar_p": 4.49140797733786e-16
+  },
+  "trivial_right - k2_high_B_lenient": {
+   "n": 806,
+   "diff_pts": 11.166253101736972,
+   "ci95_cluster": [
+    -4.143126177024482,
+    25.479143179255917
+   ],
+   "a_only": 206,
+   "b_only": 116,
+   "mcnemar_p": 6.008677421372527e-07
+  }
+ },
+ "memory": {
+  "base_4bit_allocated_gb": 1.790487552,
+  "base_plus_adapter_allocated_gb": 1.853008896,
+  "trainable_adapter_params": 0,
+  "longest_prompt_tokens": 527,
+  "bs1_peak_allocated_gb": 2.170036224,
+  "bs1_peak_reserved_gb": 2.2544384,
+  "nvidia_smi_used_mb_after_bs1": [
+   2539,
+   0
+  ]
+ },
+ "memory_all": {
+  "definition": "torch.cuda.max_memory_allocated at batch size 1 generating the longest-prompt test hunk (527 tokens), 4-bit NF4 text-only base + unmerged LoRA r16, greedy, max_new 768 (pre-registered); GB = 1e9 bytes",
+  "weights": {
+   "base_4bit_gb": 1.7905,
+   "base_plus_adapter_gb": 1.853,
+   "note": "tied fp16 embedding/lm_head alone is ~1.02 GB of this"
+  },
+  "local_rtx3050": {
+   "torch": "2.15.0+cu132",
+   "first_call_peak_gb": 1.9347,
+   "steady_peak_gb": 1.9347,
+   "nvidia_smi_process_mib": 1997,
+   "also_with_transformers_5.23.0": 1.9347
+  },
+  "kaggle_t4": {
+   "torch": "2.11.0+cu130",
+   "transformers": "5.23.0",
+   "first_call_peak_gb": 2.17,
+   "first_call_reserved_gb": 2.2544,
+   "steady_state_peak_gb": 1.9417,
+   "explicit_logits_to_keep_1_peak_gb": 1.9417,
+   "nvidia_smi_process_mib_after_first_call": 2539,
+   "source": "kaggle/level4/out/qwen (first call, scored run) and kaggle/level4/out/l4mem/out/memdiag.json (staged diagnostic)"
+  },
+  "diagnosis": "On the T4 the first generate call in a fresh process has a one-time ~0.3 GB transient (prefill_only_max_new_1: 2.170 GB). Repeated calls peak at 1.942 GB. A forward pass that materialises logits for all 527 prompt positions peaks at 2.152 GB on both GPUs, so full-prompt logits are not what the cold call does (explicit logits_to_keep=1 changed nothing).",
+  "reading": "Weights + adapter 1.85 GB; steady-state inference peak 1.93-1.94 GB (passes < 2 GB, margin 3%); cold first call on a T4 2.17 GB (misses by 8.5%); whole-process GPU memory including the CUDA context is 1.95-2.5 GiB-scale (nvidia-smi 1997 MiB local, 2539 MiB Kaggle)."
+ },
+ "by_gold_type": {
+  "right only": {
+   "n": 368,
+   "qwen_ft": 48.369565217391305,
+   "k2_high_lenient": 44.02173913043478,
+   "take_right": 100.0
+  },
+  "left only": {
+   "n": 272,
+   "qwen_ft": 58.088235294117645,
+   "k2_high_lenient": 36.029411764705884,
+   "take_right": 0.0
+  },
+  "novel (no trivial rule)": {
+   "n": 137,
+   "qwen_ft": 8.02919708029197,
+   "k2_high_lenient": 5.839416058394161,
+   "take_right": 0.0
+  },
+  "concatenation": {
+   "n": 29,
+   "qwen_ft": 55.172413793103445,
+   "k2_high_lenient": 34.48275862068966,
+   "take_right": 0.0
+  }
+ },
+ "verdict": "NEAR-WIN"
+}

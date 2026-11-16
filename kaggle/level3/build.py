@@ -24,5 +24,5 @@ out.mkdir(parents=True, exist_ok=True)
 (out / "kernel-metadata.json").write_text(json.dumps({
     "id": f"kiranscript/resolver-level3-{mode}", "title": f"resolver level3 {mode}", "code_file": "script.py",
     "language": "python", "kernel_type": "script", "is_private": True, "enable_gpu": True, "enable_internet": True,
-    "dataset_sources": ["kiranscript/resolver-data"], "competition_sources": [], "kernel_sources": [], "model_sources": []}, indent=1))
+    "dataset_sources": ["kiranscript/resolver-data"] + cfg.get("extra_datasets", []), "competition_sources": [], "kernel_sources": [], "model_sources": []}, indent=1))
 print("built", out)
