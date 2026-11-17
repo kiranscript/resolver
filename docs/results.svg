@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 392" width="840" height="392" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title id="t">Exact match on 806 Merge-Bench Java test hunks</title>
+  <desc id="d">Horizontal bar chart. Qwen3.5-2B fine-tuned 45.0 percent. Trivial rule always take the right side 45.7 percent. K2-Horizon-3.7B untuned, best setting, 34.5 percent. Trivial rule always take the left side 33.7 percent. K2-Horizon-3.7B untuned, low effort, 28.5 percent. Qwen3.5-2B untuned 17.0 percent.</desc>
+  <!-- Transparent background. All inks are mid-tones chosen to read on both GitHub light (#ffffff) and dark (#0d1117). -->
+  <defs>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#8b949e" fill-opacity="0.16"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#8b949e" stroke-width="2.5"/>
+    </pattern>
+  </defs>
+
+  <text x="20" y="30" font-size="18" font-weight="700" fill="#768390">Exact match on 806 Merge-Bench Java test hunks</text>
+  <text x="20" y="52" font-size="13" fill="#768390">Higher is better. Both models 4-bit. One test run per model, pre-registered.</text>
+
+  <!-- gridlines: 0..50%, 10 px per point, x0 = 270 -->
+  <g stroke="#8b949e" stroke-opacity="0.3" stroke-width="1">
+    <line x1="270" y1="74" x2="270" y2="338"/>
+    <line x1="370" y1="74" x2="370" y2="338" stroke-dasharray="2 4"/>
+    <line x1="470" y1="74" x2="470" y2="338" stroke-dasharray="2 4"/>
+    <line x1="570" y1="74" x2="570" y2="338" stroke-dasharray="2 4"/>
+    <line x1="670" y1="74" x2="670" y2="338" stroke-dasharray="2 4"/>
+    <line x1="770" y1="74" x2="770" y2="338" stroke-dasharray="2 4"/>
+  </g>
+  <g font-size="12" fill="#768390" text-anchor="middle">
+    <text x="270" y="356">0%</text>
+    <text x="370" y="356">10%</text>
+    <text x="470" y="356">20%</text>
+    <text x="570" y="356">30%</text>
+    <text x="670" y="356">40%</text>
+    <text x="770" y="356">50%</text>
+  </g>
+
+  <!-- row labels -->
+  <g font-size="14" fill="#768390" text-anchor="end">
+    <text x="258" y="94" font-weight="700">Qwen3.5-2B fine-tuned</text>
+    <text x="258" y="111" font-size="11">this repo, adapter r2</text>
+    <text x="258" y="138">Always take the right side</text>
+    <text x="258" y="155" font-size="11">trivial rule, no model</text>
+    <text x="258" y="182">K2-Horizon-3.7B, best setting</text>
+    <text x="258" y="199" font-size="11">untuned, high effort</text>
+    <text x="258" y="226">Always take the left side</text>
+    <text x="258" y="243" font-size="11">trivial rule, no model</text>
+    <text x="258" y="270">K2-Horizon-3.7B, low effort</text>
+    <text x="258" y="287" font-size="11">untuned</text>
+    <text x="258" y="314">Qwen3.5-2B untuned</text>
+    <text x="258" y="331" font-size="11">same base model, no adapter</text>
+  </g>
+
+  <!-- bars: width = value * 10 -->
+  <rect x="270" y="82"  width="450" height="26" rx="4" fill="#2f81f7"/>
+  <rect x="270" y="126" width="457" height="26" rx="4" fill="url(#hatch)" stroke="#8b949e" stroke-width="1"/>
+  <rect x="270" y="170" width="345" height="26" rx="4" fill="#8b949e"/>
+  <rect x="270" y="214" width="337" height="26" rx="4" fill="url(#hatch)" stroke="#8b949e" stroke-width="1"/>
+  <rect x="270" y="258" width="285" height="26" rx="4" fill="#8b949e" fill-opacity="0.6"/>
+  <rect x="270" y="302" width="170" height="26" rx="4" fill="#2f81f7" fill-opacity="0.4"/>
+
+  <!-- value labels -->
+  <g font-size="14" font-weight="700" fill="#768390">
+    <text x="728" y="100">45.0%</text>
+    <text x="735" y="144">45.7%</text>
+    <text x="623" y="188">34.5%</text>
+    <text x="615" y="232">33.7%</text>
+    <text x="563" y="276">28.5%</text>
+    <text x="448" y="320">17.0%</text>
+  </g>
+
+  <text x="20" y="382" font-size="12" fill="#768390">Fine-tuned Qwen vs K2 best: +10.5 points, 95% CI [+5.4, +15.2]. Fine-tuned Qwen vs take-right: -0.6 points, a tie.</text>
+</svg>

@@ -53,7 +53,7 @@ distinguishable** (all CIs include 0), so the choice among them is a point-estim
 fine-tuning is the effect (+19-21 points over untuned Qwen), not the format, rank or learning rate. Rank and learning rate were
 varied on the full format only.
 
-## What the model actually learned (Fable's analysis of the dev_sym generations)
+## What the model actually learned (Claude Fable 5.2's analysis of the dev_sym generations)
 - **Side selection is at chance.** Where exactly one side is the developer's answer (274 items), r2 picks the right side 117 times and the
   wrong side 121 (r1: 125/112, r3: 137/103, r4: 136/106). 84% of r2's outputs are literally take-left, take-right or concatenate.
 - The +7.7 over trivial comes from hunks where one side is empty and also matches concatenation (93% exact), pure concatenations (58%),
@@ -80,6 +80,6 @@ varied on the full format only.
   package-root rule misses sibling packages). Dropping the union (130 items): r2 35.4, r1 33.3, trivial 27.0 on the remaining 477;
   conclusions unchanged.
 - CIs resample merges, not repositories, so they are slightly optimistic. The K2 comparison uses K2 low effort on dev; r2 beats
-  1.19 x K2-low by +14.7 [9.9, 19.5] and 1.5 x K2-low by +9.5 [4.3, 14.6] (Fable's check), so the gate is robust to the unmeasured high-effort row.
+  1.19 x K2-low by +14.7 [9.9, 19.5] and 1.5 x K2-low by +9.5 [4.3, 14.6] (Claude Fable 5.2's check), so the gate is robust to the unmeasured high-effort row.
 - 3 of the 607 dev items are not representable in the resolution format (counted as failures for r2, about -0.5 points).
 - Training peak memory 4.2-8.2 GB on a T4 is for training; the memory claim concerns inference (Level 4).

@@ -1,0 +1,23 @@
+import java.util.List;
+
+public class Greeter {
+    private final String name;
+
+    public Greeter(String name) {
+        this.name = name;
+    }
+
+<<<<<<< HEAD
+    public String greet() {
+        return "Hello, " + name;
+    }
+=======
+    public String greet() {
+        return "Hi " + name + "!";
+    }
+>>>>>>> feature
+
+    public static void main(String[] args) {
+        System.out.println(new Greeter("world").greet());
+    }
+}

@@ -35,7 +35,7 @@ markers themselves (85 stray line-start markers from context, 8 `// =====` comme
 "declined" by up to ~11% of hunks. It is kept for paper comparability. `scoring.declined_strict` (more `<<<<<<<` lines than the
 reference) is the stricter test; use it when analysing "declined" in Levels 1 and 3.
 
-Fixed after review (Fable, commit 15dee37): the first resolver dropped a dangling `<<<<<<<` at the end of the snippet, which
+Fixed after review (Claude Fable 5.2, commit 15dee37): the first resolver dropped a dangling `<<<<<<<` at the end of the snippet, which
 understated take-right at 42.6% (now 45.7%). Scorer verified against Merge-Bench's real `merged_conflict_reward` on 12,090 cases
 (five trivial strategies plus ten perturbations per hunk): 0 mismatches.
 

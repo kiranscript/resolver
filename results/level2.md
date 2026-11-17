@@ -1,7 +1,7 @@
 # Level 2: training data
 
 Reproduce: `scripts/fetch_data.sh && .venv/bin/python scripts/prepare_data.py && .venv/bin/python scripts/build_level2.py`
-(every number below is in `results/level2.json`). Built with Fable's review (see "Review history").
+(every number below is in `results/level2.json`). Built with Claude Fable 5.2's review (see "Review history").
 
 ## Source
 The Merge-Bench release already ships the paper's **3,424 Java training hunks** (`repos_reaper_java_train`), so no
@@ -57,7 +57,7 @@ at 98% left, 120 at 100% left, 75 at 84% right. Test: a 100-hunk merge at 98% le
    also measures untuned Qwen and K2 low effort on `dev_sym` and states which comparison each gate uses.
 
 ## Review history
-Fable review of the first version found: dev/train leakage through shared merges (fixed by SHA + package-root grouping), heavy
+Claude Fable 5.2 review of the first version found: dev/train leakage through shared merges (fixed by SHA + package-root grouping), heavy
 within-train duplication (region cap + per-merge cap), swapped copies of pure-concatenation answers being wrong targets (fixed in
 `swap_example`), and unreproducible numbers in this write-up (replaced by script-produced ones). The identifier-overlap
 "leakage guard" was dropped (mostly false positives such as `SOFTWARE`).

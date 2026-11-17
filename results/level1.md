@@ -30,7 +30,7 @@ fp16 compute) on Kaggle T4 x2, Transformers 5.23.0 for the three full runs (the 
 | **K2 high, B** | 30.0% | **31.5%** | 43.5% | 0.0% | 107 | 6 |
 
 *Declined = more `<<<<<<<` lines than the developer's answer (stricter than Merge-Bench's marker-substring bucket); "Wrong" and "No code block" are Merge-Bench's buckets, so a row does not sum to 200.
-**Lenient (K2 only, Fable's review): best of first block, last block, or, when the final answer has no code block, the last block inside its thinking. 3 of K2-high-B's 6 no-block answers had the exact developer answer in their thinking and replied in prose. We use the lenient figure as the target so K2 gets its best reading.
+**Lenient (K2 only, Claude Fable 5.2's review): best of first block, last block, or, when the final answer has no code block, the last block inside its thinking. 3 of K2-high-B's 6 no-block answers had the exact developer answer in their thinking and replied in prose. We use the lenient figure as the target so K2 gets its best reading.
 95% Wilson interval at n = 200: 30.0% -> [24, 37]; 26.5% -> [21, 33]; 14.5% -> [10, 20]. Differences of a few points between K2 rows are noise.
 
 ## Target and gap
@@ -43,7 +43,7 @@ fp16 compute) on Kaggle T4 x2, Transformers 5.23.0 for the three full runs (the 
 - Both models load in standard tooling (Transformers 5.22, bitsandbytes): **passed** (K2 via `trust_remote_code`).
 - K2 without thinking > ~40%? Best non-thinking K2 is 26.5% -> **keep**.
 
-## Significance (paired, same 200 hunks; Fable's review)
+## Significance (paired, same 200 hunks; Claude Fable 5.2's review)
 - K2 high B vs untuned Qwen B: 47 vs 16 discordant, p < 0.001. K2 is clearly ahead of untuned Qwen.
 - **Take-right vs K2 high B: 54 vs 26 discordant, p = 0.002.** The trivial rule is significantly better than K2's best row.
 

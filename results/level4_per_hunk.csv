@@ -1,0 +1,807 @@
+id,merge_sha,gold_type,qwen_finetuned_r2__bucket,k2_high_B_strict__bucket,k2_high_B_lenient__bucket,trivial_left__bucket,trivial_right__bucket,qwen_untuned_B__bucket,k2_low_B_lenient__bucket
+0,ffd401cfb1d255bf999621e687bc07c2592af4f1,concatenation,wrong,no_block,exact,wrong,wrong,exact,exact
+1,28bb88fc98a694b34aa16ca4372362235fc7cf48,left only,exact,exact,exact,exact,wrong,conflict,exact
+2,9fb814003b7bf530373d9ea1d7a80056f92692d1,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,no_block
+3,cae71552cdabc4cd1ce3f9736d59de4caadac434,right only,wrong,exact,exact,wrong,exact,exact,exact
+4,80b3135a93f0e23489cc19086e31feb12ff51798,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+5,80b3135a93f0e23489cc19086e31feb12ff51798,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+6,80b3135a93f0e23489cc19086e31feb12ff51798,left only,wrong,exact,exact,exact,wrong,wrong,no_block
+7,77ca2cb827b0a0b10f18d609fa5fd707c62376f7,novel (no trivial rule),wrong,wrong,wrong,normalized,wrong,wrong,wrong
+8,77ca2cb827b0a0b10f18d609fa5fd707c62376f7,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+9,0fe5af60744a5d107c5cb51f9bbbdb1ea2d05dfe,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+10,3755babf55525c58879b988adbd281e9f4ea57a8,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+11,7739f34e2d873b026a191c17c3f10396638d0144,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+12,67bcb76a96f358fc131320b0611ffaa3bf3678c2,left only,exact,exact,exact,exact,wrong,exact,exact
+13,67bcb76a96f358fc131320b0611ffaa3bf3678c2,left only,exact,wrong,wrong,exact,wrong,wrong,no_block
+14,67bcb76a96f358fc131320b0611ffaa3bf3678c2,left only,exact,exact,exact,exact,wrong,exact,wrong
+15,67bcb76a96f358fc131320b0611ffaa3bf3678c2,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,no_block
+16,67bcb76a96f358fc131320b0611ffaa3bf3678c2,left only,exact,wrong,wrong,exact,wrong,wrong,exact
+17,67bcb76a96f358fc131320b0611ffaa3bf3678c2,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+18,67bcb76a96f358fc131320b0611ffaa3bf3678c2,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+19,67bcb76a96f358fc131320b0611ffaa3bf3678c2,left only,wrong,wrong,wrong,exact,wrong,no_block,wrong
+20,67bcb76a96f358fc131320b0611ffaa3bf3678c2,left only,normalized,normalized,normalized,exact,normalized,wrong,no_block
+21,67bcb76a96f358fc131320b0611ffaa3bf3678c2,concatenation,wrong,wrong,wrong,wrong,wrong,wrong,exact
+22,67bcb76a96f358fc131320b0611ffaa3bf3678c2,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+23,67bcb76a96f358fc131320b0611ffaa3bf3678c2,left only,wrong,exact,exact,exact,wrong,wrong,wrong
+24,67bcb76a96f358fc131320b0611ffaa3bf3678c2,left only,exact,normalized,normalized,exact,wrong,wrong,wrong
+25,5463b8f87d835f29ccb1c4feedad7ffad49380f6,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+26,5463b8f87d835f29ccb1c4feedad7ffad49380f6,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+27,cc0703054530b4eeda07a2b1b619ed34e1e7d201,left only,exact,exact,exact,exact,wrong,wrong,exact
+28,cc0703054530b4eeda07a2b1b619ed34e1e7d201,right only,wrong,exact,exact,wrong,exact,wrong,exact
+29,cc0703054530b4eeda07a2b1b619ed34e1e7d201,novel (no trivial rule),wrong,wrong,wrong,normalized,wrong,wrong,wrong
+30,cc0703054530b4eeda07a2b1b619ed34e1e7d201,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+31,cc0703054530b4eeda07a2b1b619ed34e1e7d201,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+32,cc0703054530b4eeda07a2b1b619ed34e1e7d201,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,normalized
+33,cc0703054530b4eeda07a2b1b619ed34e1e7d201,left only,exact,wrong,wrong,exact,wrong,wrong,exact
+34,cc0703054530b4eeda07a2b1b619ed34e1e7d201,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,no_block
+35,c85cbed209c6bf46d7456c18480f2de60b8652b4,left only,wrong,exact,exact,exact,wrong,exact,wrong
+36,a647950590fa8dec1925101321699283f22a8bff,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+37,a647950590fa8dec1925101321699283f22a8bff,concatenation,exact,wrong,wrong,conflict,conflict,wrong,wrong
+38,a647950590fa8dec1925101321699283f22a8bff,left only,conflict,conflict,conflict,exact,conflict,conflict,wrong
+39,5adedd24812861bedaf540555ec046744b42b42a,left only,normalized,wrong,wrong,exact,wrong,normalized,no_block
+40,5adedd24812861bedaf540555ec046744b42b42a,left only,exact,exact,exact,exact,wrong,wrong,no_block
+41,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,exact,exact,normalized,exact,conflict,exact
+42,5adedd24812861bedaf540555ec046744b42b42a,right only,normalized,wrong,wrong,normalized,exact,conflict,normalized
+43,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,exact,exact,normalized,exact,wrong,wrong
+44,5adedd24812861bedaf540555ec046744b42b42a,right only,normalized,normalized,normalized,normalized,exact,wrong,no_block
+45,5adedd24812861bedaf540555ec046744b42b42a,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+46,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,wrong,wrong,wrong,exact,conflict,wrong
+47,5adedd24812861bedaf540555ec046744b42b42a,right only,wrong,wrong,wrong,wrong,exact,exact,exact
+48,5adedd24812861bedaf540555ec046744b42b42a,right only,wrong,wrong,wrong,wrong,exact,exact,wrong
+49,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,wrong,wrong,wrong,exact,conflict,wrong
+50,5adedd24812861bedaf540555ec046744b42b42a,right only,wrong,wrong,wrong,wrong,exact,wrong,no_block
+51,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,no_block,exact,wrong,exact,exact,exact
+52,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,wrong,wrong,wrong,exact,wrong,exact
+53,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,normalized,normalized,normalized,exact,exact,exact
+54,5adedd24812861bedaf540555ec046744b42b42a,left only,wrong,exact,exact,exact,wrong,wrong,wrong
+55,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,normalized,normalized,normalized,exact,exact,normalized
+56,5adedd24812861bedaf540555ec046744b42b42a,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+57,5adedd24812861bedaf540555ec046744b42b42a,right only,wrong,wrong,wrong,wrong,exact,wrong,exact
+58,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,exact,exact,wrong,exact,wrong,exact
+59,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,exact,exact,wrong,exact,conflict,exact
+60,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,wrong,wrong,wrong,exact,exact,wrong
+61,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,exact,exact,wrong,exact,conflict,exact
+62,5adedd24812861bedaf540555ec046744b42b42a,right only,wrong,wrong,wrong,wrong,exact,conflict,exact
+63,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,wrong,wrong,wrong,exact,wrong,exact
+64,5adedd24812861bedaf540555ec046744b42b42a,right only,wrong,wrong,wrong,wrong,exact,conflict,exact
+65,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,exact,exact,wrong,exact,conflict,exact
+66,5adedd24812861bedaf540555ec046744b42b42a,right only,wrong,exact,exact,wrong,exact,conflict,wrong
+67,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,wrong,wrong,wrong,exact,conflict,exact
+68,5adedd24812861bedaf540555ec046744b42b42a,left only,exact,wrong,wrong,exact,conflict,conflict,wrong
+69,5adedd24812861bedaf540555ec046744b42b42a,right only,normalized,exact,exact,wrong,exact,exact,exact
+70,5adedd24812861bedaf540555ec046744b42b42a,right only,exact,exact,exact,wrong,exact,exact,exact
+71,5adedd24812861bedaf540555ec046744b42b42a,right only,wrong,wrong,wrong,wrong,exact,conflict,exact
+72,5adedd24812861bedaf540555ec046744b42b42a,right only,normalized,exact,exact,normalized,exact,normalized,exact
+73,5adedd24812861bedaf540555ec046744b42b42a,right only,normalized,wrong,wrong,normalized,exact,conflict,normalized
+74,5adedd24812861bedaf540555ec046744b42b42a,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+75,5adedd24812861bedaf540555ec046744b42b42a,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+76,5adedd24812861bedaf540555ec046744b42b42a,right only,normalized,wrong,wrong,normalized,exact,normalized,normalized
+77,5adedd24812861bedaf540555ec046744b42b42a,novel (no trivial rule),exact,wrong,wrong,normalized,wrong,normalized,normalized
+78,5adedd24812861bedaf540555ec046744b42b42a,left only,wrong,wrong,wrong,exact,wrong,conflict,wrong
+79,5adedd24812861bedaf540555ec046744b42b42a,left only,exact,exact,exact,exact,wrong,wrong,exact
+80,5adedd24812861bedaf540555ec046744b42b42a,left only,exact,wrong,wrong,exact,conflict,wrong,wrong
+81,5adedd24812861bedaf540555ec046744b42b42a,left only,exact,wrong,wrong,exact,conflict,conflict,no_block
+82,5adedd24812861bedaf540555ec046744b42b42a,left only,wrong,normalized,normalized,exact,wrong,wrong,wrong
+83,5adedd24812861bedaf540555ec046744b42b42a,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+84,5adedd24812861bedaf540555ec046744b42b42a,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+85,5adedd24812861bedaf540555ec046744b42b42a,left only,exact,exact,exact,exact,wrong,wrong,exact
+86,4584f06e2583bffe4a97884c772d3190cc6348ba,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+87,4379c14f6dabf7caa1fbe1f6f8f2816f65a68c43,concatenation,wrong,normalized,normalized,wrong,wrong,no_block,wrong
+88,d03dac9db71fadc7ff2663477514f7d0d10b3d94,concatenation,exact,exact,exact,wrong,wrong,exact,wrong
+89,ed08e371978529db8a908e266dc1a8add1d37967,right only,conflict,wrong,wrong,conflict,exact,conflict,no_block
+90,ed08e371978529db8a908e266dc1a8add1d37967,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+91,ed08e371978529db8a908e266dc1a8add1d37967,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,conflict,wrong
+92,ed08e371978529db8a908e266dc1a8add1d37967,novel (no trivial rule),normalized,wrong,wrong,wrong,wrong,wrong,wrong
+93,ed08e371978529db8a908e266dc1a8add1d37967,novel (no trivial rule),normalized,normalized,normalized,wrong,normalized,normalized,no_block
+94,ed08e371978529db8a908e266dc1a8add1d37967,novel (no trivial rule),normalized,normalized,normalized,wrong,normalized,wrong,normalized
+95,ed08e371978529db8a908e266dc1a8add1d37967,novel (no trivial rule),normalized,normalized,normalized,wrong,normalized,conflict,exact
+96,ed08e371978529db8a908e266dc1a8add1d37967,right only,wrong,exact,exact,wrong,exact,wrong,exact
+97,ed08e371978529db8a908e266dc1a8add1d37967,novel (no trivial rule),normalized,normalized,normalized,wrong,normalized,conflict,exact
+98,1849588bf7a3cbba44434ff5348b02aa114415ba,left only,exact,exact,exact,exact,normalized,normalized,wrong
+99,61056d641fa4f45156766a8c333ee3f4179fcae7,right only,conflict,wrong,wrong,conflict,exact,conflict,wrong
+100,61056d641fa4f45156766a8c333ee3f4179fcae7,right only,conflict,conflict,conflict,conflict,exact,conflict,wrong
+101,61056d641fa4f45156766a8c333ee3f4179fcae7,right only,conflict,wrong,wrong,conflict,exact,conflict,wrong
+102,61056d641fa4f45156766a8c333ee3f4179fcae7,right only,conflict,wrong,wrong,conflict,exact,conflict,conflict
+103,61056d641fa4f45156766a8c333ee3f4179fcae7,right only,conflict,wrong,wrong,conflict,exact,conflict,wrong
+104,61056d641fa4f45156766a8c333ee3f4179fcae7,right only,conflict,wrong,wrong,conflict,exact,conflict,no_block
+105,06e86330876dee7fcb1356794176b04a7161cf65,right only,wrong,normalized,normalized,wrong,exact,wrong,wrong
+106,06e86330876dee7fcb1356794176b04a7161cf65,right only,wrong,no_block,exact,wrong,exact,no_block,exact
+107,06e86330876dee7fcb1356794176b04a7161cf65,right only,exact,exact,exact,wrong,exact,no_block,exact
+108,06e86330876dee7fcb1356794176b04a7161cf65,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+109,06e86330876dee7fcb1356794176b04a7161cf65,right only,exact,exact,exact,wrong,exact,exact,wrong
+110,06e86330876dee7fcb1356794176b04a7161cf65,right only,exact,wrong,wrong,wrong,exact,wrong,no_block
+111,06e86330876dee7fcb1356794176b04a7161cf65,right only,exact,exact,exact,wrong,exact,wrong,exact
+112,83b4825637b877f932a8e31c9c869d5243ab6fb3,novel (no trivial rule),wrong,exact,exact,normalized,wrong,no_block,exact
+113,813d480c0d5d482664c5a509543f15a2883e7a11,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+114,4057ed7267373746aac7309260708831177d38dc,concatenation,wrong,wrong,wrong,wrong,wrong,no_block,wrong
+115,d63f57791b22919cb13eefb8e975a0d465022f72,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+116,18ac8197505121ad8962738ebb7f9bf973a1ac7a,concatenation,wrong,exact,exact,wrong,wrong,conflict,exact
+117,42bfc423b52bed1c5d64d35cc1100a32b48968d6,left only,exact,exact,exact,exact,wrong,wrong,wrong
+118,e3fe61199a31f30ef026d62e2799dcebe5d944f2,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+119,f8f91f1d455f6842ca57b8294f6a263ff0cde1e4,right only,exact,exact,exact,wrong,exact,exact,exact
+120,f8f91f1d455f6842ca57b8294f6a263ff0cde1e4,right only,wrong,exact,exact,wrong,exact,wrong,exact
+121,f8f91f1d455f6842ca57b8294f6a263ff0cde1e4,right only,exact,exact,exact,wrong,exact,wrong,exact
+122,f8f91f1d455f6842ca57b8294f6a263ff0cde1e4,right only,exact,no_block,exact,wrong,exact,conflict,exact
+123,f8f91f1d455f6842ca57b8294f6a263ff0cde1e4,right only,exact,exact,exact,wrong,exact,exact,normalized
+124,46751d2846d926dab116569835f3660a6297da86,left only,exact,wrong,wrong,exact,wrong,wrong,exact
+125,46751d2846d926dab116569835f3660a6297da86,left only,conflict,wrong,wrong,exact,conflict,wrong,wrong
+126,c120f1dfe1a968fce9fb82f405228d0fe13fe71c,left only,exact,exact,exact,exact,wrong,exact,wrong
+127,ca63bf35d05c86122ad0b10a2887245523f1ca2f,right only,exact,wrong,wrong,wrong,exact,exact,exact
+128,90b95dd53d88e33bb1dd393eab78bae4f6ab5b14,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,conflict,wrong
+129,4e28e73bb83b75f1369a705d15c96e40fb7098e1,concatenation,exact,exact,exact,wrong,wrong,normalized,wrong
+130,4e28e73bb83b75f1369a705d15c96e40fb7098e1,left only,wrong,wrong,wrong,exact,wrong,exact,wrong
+131,b91691ef1d20e616fd9c37d4018eb0db78db8898,right only,wrong,normalized,normalized,wrong,exact,wrong,wrong
+132,57eb1bac81a4e03e9838c06f642a1432dbbe4e1b,right only,exact,normalized,normalized,wrong,exact,exact,wrong
+133,57eb1bac81a4e03e9838c06f642a1432dbbe4e1b,left only,wrong,wrong,wrong,exact,wrong,wrong,exact
+134,57eb1bac81a4e03e9838c06f642a1432dbbe4e1b,left only,exact,exact,exact,exact,normalized,normalized,normalized
+135,57eb1bac81a4e03e9838c06f642a1432dbbe4e1b,left only,exact,wrong,wrong,exact,normalized,wrong,wrong
+136,d95d3beb3c320c98d0af2ce3bcd2f3b656bdc98d,right only,wrong,exact,exact,wrong,exact,wrong,exact
+137,d95d3beb3c320c98d0af2ce3bcd2f3b656bdc98d,right only,wrong,wrong,wrong,wrong,exact,normalized,exact
+138,f6a8f7aa42cae344f71cc6759f1c7880b49211fc,right only,exact,exact,exact,normalized,exact,exact,normalized
+139,f6a8f7aa42cae344f71cc6759f1c7880b49211fc,right only,exact,exact,exact,wrong,exact,no_block,exact
+140,f6a8f7aa42cae344f71cc6759f1c7880b49211fc,right only,exact,exact,exact,wrong,exact,exact,exact
+141,8923da8cd49c041d99fd5996ddf807f54915c79e,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,normalized
+142,8923da8cd49c041d99fd5996ddf807f54915c79e,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,conflict,exact
+143,0ae7f1d024767140d97e8f17fbf35dec14a4b384,right only,exact,exact,exact,wrong,exact,conflict,exact
+144,0ae7f1d024767140d97e8f17fbf35dec14a4b384,left only,exact,wrong,wrong,exact,wrong,exact,exact
+145,0ae7f1d024767140d97e8f17fbf35dec14a4b384,left only,exact,exact,exact,exact,wrong,exact,exact
+146,5e2f75cb9f2d357f135a4cb3d2f905fb78fa9d40,left only,exact,wrong,wrong,exact,wrong,conflict,wrong
+147,5e2f75cb9f2d357f135a4cb3d2f905fb78fa9d40,novel (no trivial rule),normalized,normalized,normalized,normalized,wrong,wrong,wrong
+148,2125666c1941d4a88c08ab87ebf92ee46be4f0ea,right only,normalized,normalized,normalized,normalized,exact,conflict,normalized
+149,2125666c1941d4a88c08ab87ebf92ee46be4f0ea,right only,exact,exact,exact,wrong,exact,exact,exact
+150,2125666c1941d4a88c08ab87ebf92ee46be4f0ea,right only,exact,normalized,normalized,wrong,exact,exact,exact
+151,2125666c1941d4a88c08ab87ebf92ee46be4f0ea,right only,exact,wrong,wrong,wrong,exact,exact,exact
+152,2125666c1941d4a88c08ab87ebf92ee46be4f0ea,right only,exact,exact,exact,wrong,exact,exact,exact
+153,2125666c1941d4a88c08ab87ebf92ee46be4f0ea,right only,exact,exact,exact,wrong,exact,exact,exact
+154,2125666c1941d4a88c08ab87ebf92ee46be4f0ea,right only,exact,wrong,wrong,wrong,exact,exact,exact
+155,2125666c1941d4a88c08ab87ebf92ee46be4f0ea,right only,exact,exact,exact,wrong,exact,exact,exact
+156,2125666c1941d4a88c08ab87ebf92ee46be4f0ea,right only,exact,normalized,normalized,wrong,exact,exact,exact
+157,2125666c1941d4a88c08ab87ebf92ee46be4f0ea,concatenation,exact,wrong,wrong,wrong,wrong,exact,wrong
+158,f52ad1d45dda2f7312098d8b51fa287f11cc1944,novel (no trivial rule),wrong,wrong,wrong,wrong,normalized,conflict,no_block
+159,f52ad1d45dda2f7312098d8b51fa287f11cc1944,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+160,f52ad1d45dda2f7312098d8b51fa287f11cc1944,right only,wrong,exact,exact,wrong,exact,wrong,exact
+161,1488b22ce313803d012c8ace36c3b12f930ee309,right only,normalized,normalized,normalized,normalized,exact,wrong,exact
+162,1488b22ce313803d012c8ace36c3b12f930ee309,right only,conflict,wrong,wrong,conflict,exact,conflict,wrong
+163,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+164,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,wrong,exact
+165,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+166,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,wrong,exact
+167,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,wrong,wrong
+168,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+169,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,wrong,wrong,wrong,exact,conflict,wrong
+170,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,normalized,exact,normalized,exact
+171,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,normalized,normalized,normalized,exact,normalized,exact
+172,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,wrong,wrong,conflict,exact,conflict,conflict
+173,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+174,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+175,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,wrong,wrong,normalized,exact,wrong,wrong
+176,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,normalized,normalized,wrong,exact,wrong,wrong
+177,1488b22ce313803d012c8ace36c3b12f930ee309,right only,normalized,normalized,normalized,wrong,exact,wrong,wrong
+178,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+179,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,wrong,normalized
+180,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,exact,wrong
+181,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,exact,wrong
+182,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+183,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,exact,exact,wrong,exact,exact,no_block
+184,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+185,1488b22ce313803d012c8ace36c3b12f930ee309,right only,normalized,normalized,normalized,normalized,exact,conflict,normalized
+186,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+187,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,wrong,normalized
+188,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,normalized,exact,wrong,wrong
+189,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+190,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,exact,exact,wrong,exact,wrong,exact
+191,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,wrong,wrong,conflict,exact,wrong,wrong
+192,1488b22ce313803d012c8ace36c3b12f930ee309,right only,conflict,wrong,wrong,conflict,exact,conflict,wrong
+193,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+194,1488b22ce313803d012c8ace36c3b12f930ee309,right only,conflict,wrong,wrong,conflict,exact,wrong,wrong
+195,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,conflict,conflict,conflict,exact,conflict,wrong
+196,1488b22ce313803d012c8ace36c3b12f930ee309,right only,conflict,wrong,wrong,conflict,exact,conflict,wrong
+197,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,conflict,wrong
+198,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,wrong,wrong,normalized,exact,exact,normalized
+199,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+200,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,normalized,normalized,normalized,exact,normalized,normalized
+201,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,normalized,normalized,normalized,exact,wrong,normalized
+202,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,normalized,normalized
+203,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,normalized,normalized,wrong,exact,wrong,wrong
+204,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,normalized,exact,exact,exact
+205,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+206,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,normalized,normalized,normalized,exact,wrong,wrong
+207,1488b22ce313803d012c8ace36c3b12f930ee309,right only,conflict,wrong,wrong,conflict,exact,no_block,wrong
+208,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,normalized,normalized,wrong,exact,wrong,wrong
+209,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,wrong,wrong
+210,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+211,1488b22ce313803d012c8ace36c3b12f930ee309,right only,normalized,exact,exact,normalized,exact,wrong,wrong
+212,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+213,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,wrong,wrong
+214,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+215,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,exact,exact,wrong,exact,wrong,exact
+216,1488b22ce313803d012c8ace36c3b12f930ee309,right only,normalized,wrong,wrong,normalized,exact,normalized,exact
+217,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,exact,exact
+218,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+219,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,exact,exact,wrong,exact,wrong,normalized
+220,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,normalized,exact
+221,1488b22ce313803d012c8ace36c3b12f930ee309,right only,normalized,no_block,no_block,normalized,exact,normalized,exact
+222,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,normalized,exact,wrong,normalized
+223,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,exact,wrong
+224,1488b22ce313803d012c8ace36c3b12f930ee309,right only,normalized,wrong,wrong,normalized,exact,wrong,wrong
+225,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,wrong,wrong
+226,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,wrong,wrong,conflict,exact,conflict,wrong
+227,1488b22ce313803d012c8ace36c3b12f930ee309,right only,conflict,wrong,wrong,conflict,exact,wrong,wrong
+228,1488b22ce313803d012c8ace36c3b12f930ee309,right only,conflict,wrong,wrong,conflict,exact,conflict,wrong
+229,1488b22ce313803d012c8ace36c3b12f930ee309,right only,normalized,wrong,wrong,conflict,exact,conflict,wrong
+230,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,normalized,normalized,wrong,exact,normalized,normalized
+231,1488b22ce313803d012c8ace36c3b12f930ee309,right only,wrong,wrong,wrong,wrong,exact,wrong,exact
+232,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,wrong,exact,wrong,exact
+233,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,wrong,wrong,conflict,exact,wrong,wrong
+234,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,normalized,normalized,wrong,exact,wrong,exact
+235,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,exact,exact,normalized,exact,normalized,normalized
+236,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,wrong,wrong,wrong,exact,wrong,exact
+237,1488b22ce313803d012c8ace36c3b12f930ee309,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+238,1488b22ce313803d012c8ace36c3b12f930ee309,right only,normalized,exact,exact,normalized,exact,wrong,no_block
+239,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+240,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,right only,exact,exact,exact,wrong,exact,exact,exact
+241,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,concatenation,exact,exact,exact,wrong,wrong,exact,wrong
+242,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,left only,exact,wrong,wrong,exact,wrong,conflict,normalized
+243,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+244,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,novel (no trivial rule),exact,normalized,normalized,normalized,normalized,wrong,normalized
+245,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,left only,exact,normalized,normalized,exact,normalized,exact,normalized
+246,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,novel (no trivial rule),exact,normalized,normalized,normalized,normalized,wrong,exact
+247,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,novel (no trivial rule),normalized,normalized,normalized,normalized,normalized,normalized,normalized
+248,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,novel (no trivial rule),normalized,normalized,normalized,normalized,normalized,normalized,normalized
+249,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,novel (no trivial rule),normalized,normalized,normalized,normalized,normalized,wrong,normalized
+250,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,novel (no trivial rule),normalized,normalized,normalized,normalized,normalized,normalized,normalized
+251,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,left only,normalized,exact,exact,exact,normalized,conflict,normalized
+252,1cb2531c41db7942eca2b75f500cfe7e4a8cad81,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+253,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,wrong,wrong,wrong,exact,wrong,no_block,exact
+254,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,exact,normalized,normalized,exact,normalized,conflict,exact
+255,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,exact,normalized,normalized,exact,normalized,wrong,exact
+256,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+257,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,exact,exact,wrong,exact,exact,exact
+258,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,exact,exact,wrong,exact,exact,exact
+259,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,wrong,wrong,conflict,exact,wrong,no_block
+260,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+261,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,normalized,exact,exact,exact,normalized,wrong,exact
+262,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,exact,exact,wrong,exact,exact,exact
+263,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,exact,normalized,normalized,exact,normalized,normalized,exact
+264,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,exact,exact,wrong,exact,wrong,exact
+265,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,exact,exact,wrong,exact,exact,exact
+266,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,wrong,exact,exact,exact,wrong,wrong,normalized
+267,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,exact,exact,normalized,exact,conflict,wrong
+268,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,exact,wrong,wrong,exact,normalized,exact,wrong
+269,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,normalized,exact,exact,exact,normalized,wrong,exact
+270,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+271,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,exact,exact,exact,exact,normalized,wrong,exact
+272,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,exact,exact,exact,exact,normalized,exact,normalized
+273,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,exact,exact,exact,exact,normalized,wrong,normalized
+274,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,normalized,exact,exact,wrong,exact,exact,wrong
+275,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,exact,normalized,normalized,exact,normalized,wrong,wrong
+276,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,exact,normalized,normalized,exact,normalized,normalized,normalized
+277,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,exact,exact,wrong,exact,conflict,exact
+278,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,exact,normalized,normalized,exact,normalized,wrong,normalized
+279,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,exact,normalized,normalized,exact,normalized,normalized,normalized
+280,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,exact,exact,exact,exact,normalized,normalized,normalized
+281,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,exact,exact,wrong,exact,wrong,wrong
+282,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,exact,exact,wrong,exact,exact,exact
+283,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+284,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,wrong,wrong,wrong,exact,exact,exact
+285,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,wrong,exact,exact,exact,wrong,wrong,wrong
+286,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,novel (no trivial rule),wrong,no_block,no_block,wrong,wrong,wrong,wrong
+287,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,exact,exact,exact,wrong,exact,wrong,wrong
+288,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+289,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,right only,wrong,exact,exact,wrong,exact,exact,normalized
+290,88ae4a5fc1d6ff4a9d3c070fe2fc64a50827c37a,left only,wrong,wrong,wrong,exact,wrong,wrong,exact
+291,ac9e5c1cbd4e6df93b199be157e1ed86b3d613ab,novel (no trivial rule),exact,wrong,wrong,wrong,normalized,wrong,wrong
+292,521870c30d018ee4f03190fcc45414954f75118b,left only,exact,exact,exact,exact,wrong,wrong,exact
+293,c417ada53c003bd4dbb38959f4581fa161b47d43,left only,exact,exact,exact,exact,wrong,exact,wrong
+294,bdcc9aaa22f9470ce4d424736aabbc49c4857931,left only,exact,wrong,wrong,exact,conflict,wrong,wrong
+295,bdcc9aaa22f9470ce4d424736aabbc49c4857931,left only,exact,wrong,wrong,exact,conflict,conflict,wrong
+296,6e81e3852480002d055fb871f5da2f1b8c256cfb,right only,wrong,normalized,normalized,wrong,exact,wrong,exact
+297,57753d9b342ba712f40b3f2104b413c9720961fc,left only,wrong,wrong,wrong,exact,wrong,no_block,wrong
+298,4dad4b6f9ffd42aaf0a81bf4fc4026ac51e656d0,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,conflict,wrong
+299,0b417b6a09b0560e1dbb221d37310d67f7f56fcb,left only,exact,exact,exact,exact,wrong,exact,exact
+300,0b417b6a09b0560e1dbb221d37310d67f7f56fcb,left only,exact,exact,exact,exact,wrong,wrong,exact
+301,e2ba4704971f22e8d6c1ef0933f04d288b8c3f4b,concatenation,exact,wrong,wrong,wrong,wrong,normalized,exact
+302,246038930daab49ea80c77b36f874af9435aab24,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+303,97d4f628bf2675efd7c06c6636b473b06d0e080b,right only,conflict,wrong,wrong,conflict,exact,conflict,wrong
+304,97d4f628bf2675efd7c06c6636b473b06d0e080b,right only,wrong,exact,exact,wrong,exact,wrong,normalized
+305,cb961dc3d5c704340d8ab747637d1c475bedc03d,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,conflict,wrong
+306,e09ee671a059143adc0ae222d4caab742508cad7,left only,normalized,normalized,normalized,exact,normalized,wrong,normalized
+307,a4124a4ad635d102c78fcfce196713a40477586f,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+308,a4124a4ad635d102c78fcfce196713a40477586f,left only,wrong,exact,exact,exact,wrong,conflict,wrong
+309,b807edeecf20796a588b8510ceb86d80f0cad699,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+310,de460f053e7948460b81e71a410d665d956db90a,left only,wrong,wrong,wrong,exact,wrong,exact,wrong
+311,de460f053e7948460b81e71a410d665d956db90a,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+312,de460f053e7948460b81e71a410d665d956db90a,left only,wrong,wrong,wrong,exact,wrong,conflict,wrong
+313,de460f053e7948460b81e71a410d665d956db90a,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+314,66827e951a3a7f558f4174b3bd6fbe5bf3fa50d8,left only,wrong,exact,exact,exact,wrong,wrong,exact
+315,66827e951a3a7f558f4174b3bd6fbe5bf3fa50d8,left only,wrong,exact,exact,exact,wrong,wrong,wrong
+316,66827e951a3a7f558f4174b3bd6fbe5bf3fa50d8,right only,exact,exact,exact,normalized,exact,wrong,exact
+317,9734ffd77100479d84522d730522fefa5d6e8522,right only,exact,exact,exact,wrong,exact,no_block,exact
+318,9734ffd77100479d84522d730522fefa5d6e8522,right only,exact,normalized,normalized,wrong,exact,wrong,wrong
+319,cbb20c83a4abae0550321f56101bb216b5c8f5bb,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+320,cbb20c83a4abae0550321f56101bb216b5c8f5bb,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+321,35866bda67daa370881be103a8ba2cd2fcd57332,novel (no trivial rule),exact,wrong,wrong,wrong,wrong,exact,wrong
+322,f977f63c0c0331b415e90b37d1c3b44ad214144b,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+323,f977f63c0c0331b415e90b37d1c3b44ad214144b,right only,wrong,exact,exact,wrong,exact,wrong,exact
+324,d71053b45ade1149cf75bdd0e8b9259c9894dc60,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+325,d71053b45ade1149cf75bdd0e8b9259c9894dc60,left only,exact,exact,exact,exact,normalized,wrong,exact
+326,5f1eecd58485bc3b7c0bc8e0b479d0b2d40f344b,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+327,5f1eecd58485bc3b7c0bc8e0b479d0b2d40f344b,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+328,5f1eecd58485bc3b7c0bc8e0b479d0b2d40f344b,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+329,5f1eecd58485bc3b7c0bc8e0b479d0b2d40f344b,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+330,3cac0b691a1f6bce876565b41eb831a0f4e82d6d,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+331,3cac0b691a1f6bce876565b41eb831a0f4e82d6d,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+332,3cac0b691a1f6bce876565b41eb831a0f4e82d6d,concatenation,exact,wrong,wrong,wrong,wrong,exact,wrong
+333,3cac0b691a1f6bce876565b41eb831a0f4e82d6d,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+334,3cac0b691a1f6bce876565b41eb831a0f4e82d6d,left only,exact,wrong,wrong,exact,wrong,wrong,normalized
+335,3cac0b691a1f6bce876565b41eb831a0f4e82d6d,left only,wrong,wrong,wrong,exact,wrong,exact,wrong
+336,ddf3e5fca3fad4fa766685157302c0b7b11ade62,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+337,ddf3e5fca3fad4fa766685157302c0b7b11ade62,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+338,ddf3e5fca3fad4fa766685157302c0b7b11ade62,right only,wrong,exact,exact,wrong,exact,conflict,exact
+339,d5dd2fd24060a5615f518d6719823eaeca221ce1,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,conflict,wrong
+340,a3f439a563675a41df75fdb5d086275846ae1e4d,left only,exact,normalized,normalized,exact,wrong,wrong,exact
+341,81014198f34bd4d5b4efb7bed4cad43203da4d42,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+342,beb48f272dcca6559ce662bb79fccf6ff6533a75,left only,normalized,normalized,normalized,exact,normalized,wrong,normalized
+343,fe1b8ab28f6b9e6d70825a39c04c0384351cd5a8,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+344,fe1b8ab28f6b9e6d70825a39c04c0384351cd5a8,novel (no trivial rule),normalized,exact,exact,normalized,normalized,wrong,exact
+345,fe1b8ab28f6b9e6d70825a39c04c0384351cd5a8,left only,exact,exact,exact,exact,wrong,conflict,wrong
+346,93b1cf12e3c86e0ace5ebc3b6c3509a18139c24f,right only,exact,wrong,wrong,wrong,exact,conflict,wrong
+347,93b1cf12e3c86e0ace5ebc3b6c3509a18139c24f,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+348,3714d4e47f47c4d640239dfe025a1ebf91b3b624,novel (no trivial rule),wrong,wrong,wrong,wrong,normalized,wrong,no_block
+349,2a9778c6bfd2a032bf3a67da5cfb9d6ec9364a04,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+350,47d00185e2cd4548663cc0e8c6cdf6d59640a613,left only,exact,exact,exact,exact,wrong,conflict,exact
+351,47d00185e2cd4548663cc0e8c6cdf6d59640a613,left only,exact,wrong,wrong,exact,wrong,conflict,wrong
+352,47d00185e2cd4548663cc0e8c6cdf6d59640a613,left only,exact,exact,exact,exact,wrong,conflict,exact
+353,47d00185e2cd4548663cc0e8c6cdf6d59640a613,left only,exact,wrong,wrong,exact,wrong,conflict,wrong
+354,47d00185e2cd4548663cc0e8c6cdf6d59640a613,left only,exact,wrong,wrong,exact,wrong,conflict,exact
+355,1055ff5de3675837270f9739454829ed0cc14cec,left only,wrong,wrong,wrong,exact,wrong,wrong,exact
+356,01a6cc54669b5ebf1ea1c3e27e424bba99a0ef3c,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+357,01a6cc54669b5ebf1ea1c3e27e424bba99a0ef3c,right only,exact,exact,exact,wrong,exact,conflict,exact
+358,01a6cc54669b5ebf1ea1c3e27e424bba99a0ef3c,right only,wrong,exact,exact,wrong,exact,wrong,no_block
+359,01a6cc54669b5ebf1ea1c3e27e424bba99a0ef3c,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+360,f4ec273cf8b16cc95cea4fae256857fcfd25ef18,left only,wrong,exact,exact,exact,wrong,wrong,exact
+361,f1253614bee81db4cd5344faaa5c73a5c51b2c5b,right only,exact,exact,exact,wrong,exact,wrong,exact
+362,f1253614bee81db4cd5344faaa5c73a5c51b2c5b,right only,exact,exact,exact,wrong,exact,exact,wrong
+363,f1253614bee81db4cd5344faaa5c73a5c51b2c5b,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+364,f1253614bee81db4cd5344faaa5c73a5c51b2c5b,right only,exact,wrong,wrong,conflict,exact,wrong,no_block
+365,f1253614bee81db4cd5344faaa5c73a5c51b2c5b,right only,exact,wrong,wrong,conflict,exact,conflict,wrong
+366,f1253614bee81db4cd5344faaa5c73a5c51b2c5b,right only,exact,wrong,wrong,conflict,exact,conflict,wrong
+367,f1253614bee81db4cd5344faaa5c73a5c51b2c5b,right only,exact,wrong,wrong,wrong,exact,wrong,no_block
+368,f1253614bee81db4cd5344faaa5c73a5c51b2c5b,right only,exact,exact,exact,wrong,exact,exact,exact
+369,63ed2caecc200a407ef40b249bed158f18e2c5ae,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+370,a6c6decbd4a162ff4030e2c3f74c72eb6ac9eddb,right only,exact,wrong,wrong,wrong,exact,wrong,exact
+371,2b9e9a2c04fcb8b3b93d3207f547f6f95bf681e9,left only,wrong,exact,exact,exact,wrong,wrong,wrong
+372,51762f221ec8ab38da03149c8012e63aec0433dc,left only,exact,exact,exact,exact,wrong,wrong,wrong
+373,51762f221ec8ab38da03149c8012e63aec0433dc,left only,exact,exact,exact,exact,wrong,wrong,wrong
+374,51762f221ec8ab38da03149c8012e63aec0433dc,left only,exact,exact,exact,exact,wrong,wrong,exact
+375,51762f221ec8ab38da03149c8012e63aec0433dc,left only,exact,exact,exact,exact,wrong,wrong,exact
+376,51762f221ec8ab38da03149c8012e63aec0433dc,left only,exact,exact,exact,exact,wrong,wrong,wrong
+377,6209970654c0b8d65624d98e1b49da29a99ee356,left only,exact,wrong,wrong,exact,wrong,conflict,wrong
+378,2ed19b71ea730095e23224b02a1aa0791ed10dab,right only,exact,exact,exact,wrong,exact,wrong,wrong
+379,7d80c81a6178f600c154b5c0c0c60436826efc6a,concatenation,exact,wrong,wrong,wrong,wrong,wrong,exact
+380,72bcd2216d792365c9e99dc69ee413acb1dc5b8e,novel (no trivial rule),wrong,exact,exact,wrong,wrong,wrong,wrong
+381,6252198314e0911154221dbed662947c98d77aa3,concatenation,wrong,exact,exact,wrong,wrong,wrong,wrong
+382,6252198314e0911154221dbed662947c98d77aa3,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+383,0b628c40c6a74e31e3c63b0b545670b5fc2b68c0,left only,exact,normalized,normalized,exact,normalized,wrong,wrong
+384,0b628c40c6a74e31e3c63b0b545670b5fc2b68c0,right only,normalized,normalized,normalized,normalized,exact,normalized,normalized
+385,ee249315695b6123b42f6cb1b6ab1489e37eb586,novel (no trivial rule),exact,wrong,wrong,wrong,wrong,wrong,wrong
+386,ee249315695b6123b42f6cb1b6ab1489e37eb586,novel (no trivial rule),wrong,exact,exact,wrong,wrong,wrong,exact
+387,ee249315695b6123b42f6cb1b6ab1489e37eb586,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,no_block,wrong
+388,ee249315695b6123b42f6cb1b6ab1489e37eb586,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+389,ee249315695b6123b42f6cb1b6ab1489e37eb586,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,conflict,wrong
+390,ee249315695b6123b42f6cb1b6ab1489e37eb586,novel (no trivial rule),wrong,wrong,wrong,normalized,wrong,wrong,wrong
+391,ee249315695b6123b42f6cb1b6ab1489e37eb586,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,wrong,no_block
+392,ee249315695b6123b42f6cb1b6ab1489e37eb586,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,conflict,wrong
+393,ee249315695b6123b42f6cb1b6ab1489e37eb586,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+394,ee249315695b6123b42f6cb1b6ab1489e37eb586,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+395,ee249315695b6123b42f6cb1b6ab1489e37eb586,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+396,3df3b40acb25cbd0cde24cc0fc6f8be6c0fac9b4,novel (no trivial rule),normalized,wrong,wrong,normalized,wrong,normalized,normalized
+397,12331f9ee633fcc20cd5f7b92c8f29da9a0c0549,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+398,b233cd4cf01f6acf2619f7ccd68001c34e74a6b4,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+399,6b1656b15012f02e489b801a3498ffdd9ca95f93,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+400,3c868cbe67875b5515d13bd8b8237e13dd2f9c32,concatenation,wrong,wrong,wrong,wrong,wrong,wrong,wrong
+401,3c868cbe67875b5515d13bd8b8237e13dd2f9c32,concatenation,exact,wrong,wrong,wrong,wrong,conflict,wrong
+402,6278c0e076f652c7604429e39096ecc25d4eb5b8,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+403,8549031e59a43d7b4f2763f42d84b589806c9176,left only,wrong,wrong,wrong,exact,wrong,wrong,exact
+404,467f0adf711b7a96412e01a8f7ba4a578559a3bb,novel (no trivial rule),normalized,wrong,wrong,normalized,wrong,wrong,no_block
+405,467f0adf711b7a96412e01a8f7ba4a578559a3bb,left only,exact,wrong,wrong,exact,wrong,wrong,exact
+406,467f0adf711b7a96412e01a8f7ba4a578559a3bb,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+407,467f0adf711b7a96412e01a8f7ba4a578559a3bb,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+408,d68ddea7554653e7928d220f68a3af13bfb30cdb,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+409,d68ddea7554653e7928d220f68a3af13bfb30cdb,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+410,d68ddea7554653e7928d220f68a3af13bfb30cdb,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,conflict,wrong
+411,d68ddea7554653e7928d220f68a3af13bfb30cdb,left only,exact,exact,exact,exact,wrong,wrong,exact
+412,d68ddea7554653e7928d220f68a3af13bfb30cdb,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+413,d68ddea7554653e7928d220f68a3af13bfb30cdb,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+414,d68ddea7554653e7928d220f68a3af13bfb30cdb,left only,wrong,exact,exact,exact,wrong,wrong,wrong
+415,d68ddea7554653e7928d220f68a3af13bfb30cdb,left only,exact,wrong,wrong,exact,conflict,wrong,wrong
+416,d68ddea7554653e7928d220f68a3af13bfb30cdb,left only,exact,wrong,wrong,exact,conflict,conflict,exact
+417,d68ddea7554653e7928d220f68a3af13bfb30cdb,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+418,d68ddea7554653e7928d220f68a3af13bfb30cdb,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+419,e09ee671a059143adc0ae222d4caab742508cad7,left only,normalized,normalized,normalized,exact,normalized,wrong,exact
+420,1b4df424bf08d98e85eab0c3f6e7e29a5832b07c,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+421,1b4df424bf08d98e85eab0c3f6e7e29a5832b07c,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+422,1b5691ad2a7d734321d0382e71743a85835556b3,concatenation,exact,wrong,wrong,wrong,wrong,exact,wrong
+423,1b5691ad2a7d734321d0382e71743a85835556b3,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+424,1b5691ad2a7d734321d0382e71743a85835556b3,concatenation,wrong,wrong,wrong,wrong,wrong,wrong,wrong
+425,1b5691ad2a7d734321d0382e71743a85835556b3,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+426,971b9954a7a2b57c88112a78a07f3c750d7d8e14,concatenation,wrong,exact,exact,wrong,wrong,no_block,normalized
+427,971b9954a7a2b57c88112a78a07f3c750d7d8e14,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+428,308db82053c3707c95c8a180e78ac06043dff2a5,left only,exact,exact,exact,exact,wrong,exact,exact
+429,308db82053c3707c95c8a180e78ac06043dff2a5,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+430,308db82053c3707c95c8a180e78ac06043dff2a5,right only,exact,exact,exact,wrong,exact,wrong,wrong
+431,308db82053c3707c95c8a180e78ac06043dff2a5,right only,exact,exact,exact,wrong,exact,wrong,exact
+432,308db82053c3707c95c8a180e78ac06043dff2a5,left only,exact,wrong,wrong,exact,wrong,wrong,exact
+433,308db82053c3707c95c8a180e78ac06043dff2a5,left only,exact,exact,exact,exact,wrong,exact,normalized
+434,308db82053c3707c95c8a180e78ac06043dff2a5,right only,exact,exact,exact,wrong,exact,wrong,exact
+435,308db82053c3707c95c8a180e78ac06043dff2a5,left only,exact,exact,exact,exact,wrong,normalized,normalized
+436,308db82053c3707c95c8a180e78ac06043dff2a5,right only,exact,exact,exact,wrong,exact,wrong,exact
+437,308db82053c3707c95c8a180e78ac06043dff2a5,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+438,308db82053c3707c95c8a180e78ac06043dff2a5,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+439,308db82053c3707c95c8a180e78ac06043dff2a5,right only,exact,exact,exact,wrong,exact,exact,exact
+440,27b3b224184de6f67965f86a46f621ab1c5a72c3,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+441,23596e40a6165aa475ca6c20af17496809559474,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+442,b31a7c324865e2149027b61f6310d03a48a36746,right only,exact,wrong,wrong,wrong,exact,wrong,normalized
+443,7b3abc7c4acdc932013594693c54a0725a72fbac,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+444,81014198f34bd4d5b4efb7bed4cad43203da4d42,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+445,7d8e78a2b152062a876d6f8f0f8bde7550278ed0,concatenation,wrong,normalized,normalized,wrong,wrong,no_block,wrong
+446,7d8e78a2b152062a876d6f8f0f8bde7550278ed0,right only,exact,exact,exact,wrong,exact,wrong,wrong
+447,7d8e78a2b152062a876d6f8f0f8bde7550278ed0,left only,wrong,wrong,wrong,exact,wrong,wrong,normalized
+448,7d8e78a2b152062a876d6f8f0f8bde7550278ed0,right only,exact,normalized,normalized,wrong,exact,exact,exact
+449,7d8e78a2b152062a876d6f8f0f8bde7550278ed0,right only,exact,no_block,no_block,wrong,exact,exact,exact
+450,beb48f272dcca6559ce662bb79fccf6ff6533a75,left only,normalized,normalized,normalized,exact,normalized,wrong,normalized
+451,1acff436c29ed9c0f9ce81ad845b3df7480dde83,novel (no trivial rule),exact,exact,exact,wrong,wrong,wrong,wrong
+452,a9676fd6fed05e5e92e1d41354eaeb4917cbaa05,left only,exact,exact,exact,exact,wrong,exact,exact
+453,3538cd0057c626bc74b00e016daf65dd6a051437,right only,exact,normalized,normalized,wrong,exact,normalized,no_block
+454,3538cd0057c626bc74b00e016daf65dd6a051437,concatenation,exact,wrong,wrong,wrong,wrong,exact,wrong
+455,40fa077b65ba563f1778e8e089da3c46e09760d9,left only,exact,normalized,normalized,exact,normalized,exact,normalized
+456,817f1149781eeb3ceea7839ab3213d2d2fdc9b3d,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+457,31d7966e3896819a99b31f10e83e864e3805bcbd,left only,exact,exact,exact,exact,wrong,wrong,no_block
+458,88fb3d460fede1cf0b6c460e123a9856bdd7448f,concatenation,wrong,wrong,wrong,wrong,wrong,wrong,wrong
+459,7cf5285aa22796bde5c291b9604234d5eeaac6d2,left only,exact,exact,exact,exact,wrong,wrong,exact
+460,f2aea1563fc4d150c8231efbb2ad89a0a539f166,left only,exact,wrong,wrong,exact,wrong,wrong,exact
+461,31d7966e3896819a99b31f10e83e864e3805bcbd,left only,exact,exact,exact,exact,wrong,wrong,exact
+462,1e8c07a4ea963bc19dccd51b5d39ee814bd37f0b,right only,exact,exact,exact,wrong,exact,wrong,exact
+463,b26c4f8ba13ab0d64627d01dcbba50609ff04a4f,right only,wrong,wrong,wrong,wrong,exact,exact,wrong
+464,b26c4f8ba13ab0d64627d01dcbba50609ff04a4f,left only,exact,wrong,wrong,exact,wrong,conflict,wrong
+465,ae1b395ec63b1333c717fdac150e0860cf0326e0,novel (no trivial rule),exact,wrong,wrong,wrong,wrong,wrong,wrong
+466,ae1b395ec63b1333c717fdac150e0860cf0326e0,novel (no trivial rule),exact,wrong,wrong,wrong,wrong,wrong,wrong
+467,6c5fb5474dc66d5ab104a5546f43f05b75a4aaa2,novel (no trivial rule),wrong,exact,exact,wrong,wrong,conflict,wrong
+468,6c5fb5474dc66d5ab104a5546f43f05b75a4aaa2,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+469,83d928931e4c9e249f1eabe699979ca6159afc1d,novel (no trivial rule),normalized,normalized,normalized,wrong,wrong,wrong,wrong
+470,4f2b3548a3427b3390027e8c087c6dce35a40f6c,left only,exact,exact,exact,exact,wrong,wrong,wrong
+471,a77e57ede407d2f003dc4ee4af2f8650efa56cb0,novel (no trivial rule),normalized,exact,exact,normalized,wrong,exact,exact
+472,a77e57ede407d2f003dc4ee4af2f8650efa56cb0,right only,exact,exact,exact,wrong,exact,wrong,wrong
+473,a77e57ede407d2f003dc4ee4af2f8650efa56cb0,left only,wrong,wrong,wrong,exact,wrong,no_block,wrong
+474,ebfa99cecacf6a332de1194dca867b8b96fb640d,left only,exact,exact,exact,exact,wrong,exact,exact
+475,e3e5d83603e97ebcc76c7eba09ddc2b147105885,right only,exact,exact,exact,wrong,exact,wrong,wrong
+476,e3e5d83603e97ebcc76c7eba09ddc2b147105885,right only,exact,wrong,wrong,wrong,exact,no_block,exact
+477,e3e5d83603e97ebcc76c7eba09ddc2b147105885,right only,exact,exact,exact,wrong,exact,no_block,wrong
+478,e3e5d83603e97ebcc76c7eba09ddc2b147105885,right only,exact,exact,exact,wrong,exact,normalized,exact
+479,e3e5d83603e97ebcc76c7eba09ddc2b147105885,right only,exact,normalized,normalized,wrong,exact,exact,exact
+480,e3e5d83603e97ebcc76c7eba09ddc2b147105885,right only,exact,normalized,normalized,wrong,exact,exact,exact
+481,e3e5d83603e97ebcc76c7eba09ddc2b147105885,right only,exact,exact,exact,wrong,exact,normalized,normalized
+482,e3e5d83603e97ebcc76c7eba09ddc2b147105885,right only,exact,exact,exact,wrong,exact,exact,wrong
+483,e3e5d83603e97ebcc76c7eba09ddc2b147105885,right only,exact,exact,exact,wrong,exact,no_block,exact
+484,e3e5d83603e97ebcc76c7eba09ddc2b147105885,right only,exact,exact,exact,wrong,exact,wrong,exact
+485,e3e5d83603e97ebcc76c7eba09ddc2b147105885,right only,exact,exact,exact,wrong,exact,exact,exact
+486,e3e5d83603e97ebcc76c7eba09ddc2b147105885,right only,exact,wrong,wrong,wrong,exact,wrong,exact
+487,91801fdd7714064242fef90013824ede2bbcbe9d,right only,conflict,wrong,wrong,conflict,exact,conflict,wrong
+488,91801fdd7714064242fef90013824ede2bbcbe9d,right only,conflict,wrong,wrong,conflict,exact,conflict,exact
+489,91801fdd7714064242fef90013824ede2bbcbe9d,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+490,91801fdd7714064242fef90013824ede2bbcbe9d,right only,exact,exact,exact,wrong,exact,wrong,wrong
+491,91801fdd7714064242fef90013824ede2bbcbe9d,right only,wrong,exact,exact,wrong,exact,wrong,exact
+492,91801fdd7714064242fef90013824ede2bbcbe9d,right only,conflict,exact,exact,conflict,exact,conflict,exact
+493,91801fdd7714064242fef90013824ede2bbcbe9d,right only,conflict,wrong,wrong,conflict,exact,wrong,wrong
+494,91801fdd7714064242fef90013824ede2bbcbe9d,right only,conflict,conflict,conflict,conflict,exact,conflict,conflict
+495,91801fdd7714064242fef90013824ede2bbcbe9d,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+496,91801fdd7714064242fef90013824ede2bbcbe9d,right only,conflict,conflict,conflict,conflict,exact,conflict,exact
+497,91801fdd7714064242fef90013824ede2bbcbe9d,right only,conflict,exact,exact,conflict,exact,conflict,conflict
+498,91801fdd7714064242fef90013824ede2bbcbe9d,right only,conflict,exact,exact,conflict,exact,conflict,conflict
+499,91801fdd7714064242fef90013824ede2bbcbe9d,right only,exact,normalized,normalized,wrong,exact,wrong,wrong
+500,91801fdd7714064242fef90013824ede2bbcbe9d,right only,conflict,exact,exact,conflict,exact,conflict,normalized
+501,91801fdd7714064242fef90013824ede2bbcbe9d,right only,conflict,exact,exact,conflict,exact,conflict,exact
+502,91801fdd7714064242fef90013824ede2bbcbe9d,right only,exact,exact,exact,wrong,exact,wrong,exact
+503,91801fdd7714064242fef90013824ede2bbcbe9d,right only,conflict,exact,exact,conflict,exact,conflict,exact
+504,91801fdd7714064242fef90013824ede2bbcbe9d,right only,exact,exact,exact,wrong,exact,wrong,wrong
+505,91801fdd7714064242fef90013824ede2bbcbe9d,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+506,91801fdd7714064242fef90013824ede2bbcbe9d,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+507,91801fdd7714064242fef90013824ede2bbcbe9d,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+508,91801fdd7714064242fef90013824ede2bbcbe9d,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+509,91801fdd7714064242fef90013824ede2bbcbe9d,right only,wrong,exact,exact,wrong,exact,wrong,normalized
+510,91801fdd7714064242fef90013824ede2bbcbe9d,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+511,91801fdd7714064242fef90013824ede2bbcbe9d,right only,exact,wrong,wrong,wrong,exact,wrong,normalized
+512,91801fdd7714064242fef90013824ede2bbcbe9d,right only,exact,exact,exact,wrong,exact,normalized,exact
+513,91801fdd7714064242fef90013824ede2bbcbe9d,right only,exact,exact,exact,wrong,exact,wrong,wrong
+514,91801fdd7714064242fef90013824ede2bbcbe9d,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+515,91801fdd7714064242fef90013824ede2bbcbe9d,right only,wrong,exact,exact,wrong,exact,wrong,exact
+516,91801fdd7714064242fef90013824ede2bbcbe9d,right only,exact,exact,exact,conflict,exact,conflict,exact
+517,91801fdd7714064242fef90013824ede2bbcbe9d,right only,exact,wrong,wrong,wrong,exact,wrong,no_block
+518,f6ad59da94ec434a5065bfc54ac9a207817bcb87,novel (no trivial rule),wrong,exact,exact,wrong,wrong,wrong,wrong
+519,d2c4b48a67b5a53af33a9e7c46d442403328efea,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+520,beb80fe54061a2939231a7473523e17d76be3029,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,exact
+521,790b69a0bd40e3ab536f9c6568748f981b3d525e,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+522,790b69a0bd40e3ab536f9c6568748f981b3d525e,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+523,790b69a0bd40e3ab536f9c6568748f981b3d525e,left only,exact,exact,exact,exact,wrong,normalized,exact
+524,790b69a0bd40e3ab536f9c6568748f981b3d525e,left only,wrong,no_block,no_block,exact,wrong,wrong,wrong
+525,790b69a0bd40e3ab536f9c6568748f981b3d525e,left only,exact,wrong,wrong,exact,wrong,wrong,normalized
+526,cbc12a863399869d00e8dade047061bc441e7456,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+527,452b23374e752524bf93a83d45a22011448f5945,left only,exact,exact,exact,exact,normalized,no_block,exact
+528,dff01786de3c5fdc4121d54712819008777841ff,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+529,2729e32788bc1fe1d320a3ba0e5fe5a7bddc630a,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,no_block
+530,2729e32788bc1fe1d320a3ba0e5fe5a7bddc630a,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+531,2729e32788bc1fe1d320a3ba0e5fe5a7bddc630a,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+532,b9ca34bdf3a3ccf8c3ec778b8fbd52db1765325b,right only,wrong,exact,exact,wrong,exact,wrong,exact
+533,0d25a18153c4751a6a7e51055c740287d9c1186e,right only,wrong,exact,exact,wrong,exact,wrong,exact
+534,02da86c8cf719b79f992ce365c542e3f1ad0a46b,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+535,2efc89dde2658f518e6b6ca936296c207e08d65c,right only,wrong,exact,exact,wrong,exact,conflict,normalized
+536,2efc89dde2658f518e6b6ca936296c207e08d65c,right only,exact,exact,exact,normalized,exact,wrong,normalized
+537,2efc89dde2658f518e6b6ca936296c207e08d65c,right only,exact,wrong,wrong,normalized,exact,wrong,normalized
+538,2efc89dde2658f518e6b6ca936296c207e08d65c,right only,wrong,wrong,wrong,wrong,exact,no_block,wrong
+539,2efc89dde2658f518e6b6ca936296c207e08d65c,right only,normalized,wrong,wrong,normalized,exact,wrong,exact
+540,094cb482d0c11e5f16a8f386fd5596e34e562015,left only,exact,exact,exact,exact,wrong,conflict,exact
+541,f53ac04b3b41f6cb72ba8a6413a519739022cc4f,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+542,e9e8024f1f82edc97fc8bdec6af75e81ea5b0bfa,left only,normalized,exact,exact,exact,wrong,wrong,wrong
+543,1d97bfac1d91e13b3835ca099b3a998c1969478f,left only,exact,wrong,wrong,exact,normalized,wrong,exact
+544,1d97bfac1d91e13b3835ca099b3a998c1969478f,left only,normalized,wrong,wrong,exact,normalized,conflict,wrong
+545,1d97bfac1d91e13b3835ca099b3a998c1969478f,left only,exact,exact,exact,exact,wrong,wrong,wrong
+546,1d97bfac1d91e13b3835ca099b3a998c1969478f,left only,normalized,normalized,normalized,exact,normalized,normalized,normalized
+547,1d97bfac1d91e13b3835ca099b3a998c1969478f,left only,normalized,normalized,normalized,exact,normalized,conflict,normalized
+548,1d97bfac1d91e13b3835ca099b3a998c1969478f,left only,exact,exact,exact,exact,normalized,exact,exact
+549,1d97bfac1d91e13b3835ca099b3a998c1969478f,left only,exact,exact,exact,exact,wrong,exact,wrong
+550,1d97bfac1d91e13b3835ca099b3a998c1969478f,left only,normalized,normalized,normalized,exact,normalized,wrong,normalized
+551,1d97bfac1d91e13b3835ca099b3a998c1969478f,left only,normalized,normalized,normalized,exact,normalized,normalized,normalized
+552,1d97bfac1d91e13b3835ca099b3a998c1969478f,left only,exact,wrong,wrong,exact,wrong,exact,exact
+553,1d97bfac1d91e13b3835ca099b3a998c1969478f,left only,exact,normalized,normalized,exact,normalized,exact,normalized
+554,c68495f4cd53abab9be74ed6ac6d02cd0248e662,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+555,4e8f0414b4f5ea733fcc30dd19944fd1e104bf74,novel (no trivial rule),wrong,normalized,normalized,normalized,wrong,wrong,wrong
+556,4e8f0414b4f5ea733fcc30dd19944fd1e104bf74,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+557,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,wrong,exact
+558,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+559,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+560,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,exact,exact,exact,wrong,wrong,exact
+561,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,exact,exact,exact,wrong,exact,wrong
+562,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,conflict,exact
+563,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,wrong,wrong
+564,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,exact
+565,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+566,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,exact
+567,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,exact
+568,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,exact,exact,exact,wrong,exact,wrong
+569,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+570,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+571,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,normalized,exact
+572,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+573,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,normalized,wrong,exact
+574,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+575,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,exact,exact,exact,wrong,wrong,wrong
+576,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,no_block,no_block,exact,wrong,wrong,wrong
+577,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,exact,exact,exact,wrong,wrong,wrong
+578,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,exact
+579,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,conflict,wrong
+580,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,conflict,conflict,conflict
+581,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,exact
+582,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+583,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+584,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,wrong
+585,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,exact
+586,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+587,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+588,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,conflict,wrong
+589,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+590,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+591,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,normalized,normalized,exact,normalized,normalized,normalized
+592,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+593,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,no_block,no_block,exact,wrong,wrong,wrong
+594,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,wrong,no_block
+595,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,no_block
+596,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+597,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,exact
+598,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,wrong
+599,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,exact
+600,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,exact
+601,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,no_block,no_block,exact,wrong,wrong,no_block
+602,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,exact,wrong
+603,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,exact,exact,exact,wrong,exact,wrong
+604,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,conflict,wrong
+605,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,conflict,no_block
+606,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,normalized,normalized,exact,wrong,exact,normalized
+607,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,normalized
+608,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,exact
+609,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,exact
+610,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,normalized,normalized,exact,wrong,exact,exact
+611,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,normalized,normalized,exact,wrong,exact,exact
+612,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,wrong,exact
+613,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,exact
+614,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,conflict,wrong
+615,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+616,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,exact,wrong
+617,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+618,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,wrong,wrong
+619,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,exact,normalized
+620,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,conflict,wrong,wrong,exact,conflict,wrong,wrong
+621,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,conflict,wrong,wrong,exact,conflict,conflict,conflict
+622,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+623,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,normalized,normalized,exact,wrong,exact,normalized
+624,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,normalized,normalized,exact,wrong,exact,exact
+625,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,normalized,normalized,exact,wrong,conflict,exact
+626,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,conflict,wrong
+627,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,exact
+628,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+629,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,normalized,normalized,exact,wrong,conflict,exact
+630,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+631,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,conflict,conflict,wrong
+632,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,conflict,wrong,wrong,exact,conflict,conflict,wrong
+633,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,exact,exact,exact,wrong,conflict,exact
+634,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+635,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,normalized
+636,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,normalized,normalized,exact,wrong,exact,wrong
+637,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,exact
+638,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+639,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,normalized
+640,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,exact,normalized
+641,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,exact,exact,exact,wrong,wrong,no_block
+642,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+643,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,exact,exact,exact,wrong,exact,wrong
+644,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,no_block
+645,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,exact,exact,exact,wrong,wrong,wrong
+646,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,exact,exact,exact,wrong,wrong,wrong
+647,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,no_block
+648,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+649,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,normalized,normalized,normalized,exact,normalized,normalized,normalized
+650,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+651,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,conflict,wrong
+652,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,conflict,exact
+653,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,normalized,normalized,exact,normalized,normalized,normalized
+654,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+655,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,wrong,exact,exact,exact,wrong,wrong,wrong
+656,a17acec0655b8058aaf4d336ba2a1352aa49e2fe,left only,exact,wrong,wrong,exact,wrong,wrong,no_block
+657,3e88fb2d7ef95f3cb7b5e2a771a0990c4a3a4a56,left only,exact,exact,exact,exact,wrong,wrong,wrong
+658,3e88fb2d7ef95f3cb7b5e2a771a0990c4a3a4a56,left only,exact,wrong,wrong,exact,wrong,wrong,no_block
+659,b782a4bb6b4349d23790909d1e67891adbaa126c,right only,exact,wrong,wrong,wrong,exact,exact,exact
+660,b782a4bb6b4349d23790909d1e67891adbaa126c,novel (no trivial rule),normalized,wrong,wrong,wrong,normalized,normalized,wrong
+661,b782a4bb6b4349d23790909d1e67891adbaa126c,right only,wrong,exact,exact,wrong,exact,conflict,normalized
+662,4b0f0ad0ce6afc98a1fc78b9fe46584c41f478e8,right only,exact,exact,exact,wrong,exact,exact,exact
+663,4b0f0ad0ce6afc98a1fc78b9fe46584c41f478e8,left only,exact,exact,exact,exact,wrong,exact,exact
+664,4b0f0ad0ce6afc98a1fc78b9fe46584c41f478e8,right only,exact,exact,exact,wrong,exact,exact,exact
+665,4b0f0ad0ce6afc98a1fc78b9fe46584c41f478e8,right only,wrong,normalized,normalized,wrong,exact,conflict,normalized
+666,4b0f0ad0ce6afc98a1fc78b9fe46584c41f478e8,right only,wrong,exact,exact,wrong,exact,exact,exact
+667,4b0f0ad0ce6afc98a1fc78b9fe46584c41f478e8,concatenation,conflict,wrong,wrong,conflict,conflict,conflict,no_block
+668,4b0f0ad0ce6afc98a1fc78b9fe46584c41f478e8,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,conflict,wrong
+669,4b0f0ad0ce6afc98a1fc78b9fe46584c41f478e8,right only,exact,exact,exact,wrong,exact,exact,exact
+670,7b61f14a88a9c125a24ba8dc93b98a8648e4cb70,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+671,7e96d6fbfb135715980af0b3ab285affc824af77,concatenation,exact,normalized,normalized,wrong,wrong,exact,no_block
+672,7e96d6fbfb135715980af0b3ab285affc824af77,concatenation,exact,wrong,wrong,wrong,wrong,normalized,exact
+673,228af53d8db4ea1b58282f203bd404a3d011b7a8,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+674,228af53d8db4ea1b58282f203bd404a3d011b7a8,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,conflict,wrong
+675,12df1c5d0ecdb9e47b22b81db0329cc0f17054d6,left only,wrong,normalized,normalized,exact,wrong,wrong,normalized
+676,12df1c5d0ecdb9e47b22b81db0329cc0f17054d6,novel (no trivial rule),normalized,wrong,wrong,normalized,wrong,normalized,wrong
+677,caaf8a909db2a1f688c3667dc5bdf0187d212bc2,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,conflict,wrong
+678,3ce669e268d814eac5a560d0f4ebdbece9a8a0cf,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+679,3ce669e268d814eac5a560d0f4ebdbece9a8a0cf,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+680,83418dbbb7fe923f2aef29aa4f23d01886e1b965,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,wrong,wrong
+681,83418dbbb7fe923f2aef29aa4f23d01886e1b965,novel (no trivial rule),conflict,conflict,conflict,conflict,conflict,conflict,conflict
+682,83418dbbb7fe923f2aef29aa4f23d01886e1b965,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,no_block,wrong
+683,83418dbbb7fe923f2aef29aa4f23d01886e1b965,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,conflict,wrong
+684,83418dbbb7fe923f2aef29aa4f23d01886e1b965,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,wrong,no_block
+685,83418dbbb7fe923f2aef29aa4f23d01886e1b965,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,conflict,conflict
+686,83418dbbb7fe923f2aef29aa4f23d01886e1b965,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,no_block,wrong
+687,83418dbbb7fe923f2aef29aa4f23d01886e1b965,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,conflict,conflict
+688,1fc925c0741b0f6d64564077e1ac747e1c0b6407,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,no_block
+689,cad117dce3ee314fe51d4648bd8c6cf07aeb0c87,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+690,d72e83e2638205c5015a1f9cb06ac4df592921c5,left only,exact,wrong,wrong,exact,wrong,wrong,exact
+691,d72e83e2638205c5015a1f9cb06ac4df592921c5,left only,exact,wrong,wrong,exact,conflict,wrong,wrong
+692,d72e83e2638205c5015a1f9cb06ac4df592921c5,left only,exact,wrong,wrong,exact,conflict,conflict,wrong
+693,d72e83e2638205c5015a1f9cb06ac4df592921c5,left only,exact,normalized,normalized,exact,wrong,exact,wrong
+694,d72e83e2638205c5015a1f9cb06ac4df592921c5,left only,exact,normalized,normalized,exact,wrong,exact,wrong
+695,c08e0d7adee3a6c42dfe2887fad422ea332c015e,right only,wrong,wrong,wrong,wrong,exact,exact,exact
+696,c08e0d7adee3a6c42dfe2887fad422ea332c015e,right only,exact,wrong,wrong,wrong,exact,normalized,wrong
+697,c08e0d7adee3a6c42dfe2887fad422ea332c015e,right only,exact,exact,exact,wrong,exact,exact,exact
+698,c08e0d7adee3a6c42dfe2887fad422ea332c015e,right only,exact,normalized,normalized,wrong,exact,wrong,normalized
+699,c08e0d7adee3a6c42dfe2887fad422ea332c015e,right only,conflict,wrong,wrong,conflict,exact,conflict,wrong
+700,c08e0d7adee3a6c42dfe2887fad422ea332c015e,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+701,c08e0d7adee3a6c42dfe2887fad422ea332c015e,right only,exact,normalized,normalized,wrong,exact,wrong,wrong
+702,5b113d182581d1ed140bc7768a508344f19d7d6e,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,no_block,wrong
+703,5b113d182581d1ed140bc7768a508344f19d7d6e,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+704,5b113d182581d1ed140bc7768a508344f19d7d6e,concatenation,exact,exact,exact,wrong,wrong,normalized,exact
+705,9963fea7c2a157c44549ee48a96e60f80bc33d51,concatenation,wrong,wrong,wrong,wrong,wrong,wrong,wrong
+706,5e4c2091dc2827219ba601937e8686bcb90bae78,right only,exact,wrong,wrong,wrong,exact,conflict,wrong
+707,5e4c2091dc2827219ba601937e8686bcb90bae78,left only,exact,exact,exact,exact,normalized,exact,normalized
+708,5e4c2091dc2827219ba601937e8686bcb90bae78,left only,conflict,wrong,wrong,exact,conflict,wrong,wrong
+709,760cca9f756c8b759aadcc9e3b67508946d2b173,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+710,760cca9f756c8b759aadcc9e3b67508946d2b173,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+711,760cca9f756c8b759aadcc9e3b67508946d2b173,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+712,760cca9f756c8b759aadcc9e3b67508946d2b173,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+713,ab8ddfc2d347e46622cd1d2bd517db3312181b66,left only,exact,wrong,wrong,exact,conflict,wrong,wrong
+714,ab8ddfc2d347e46622cd1d2bd517db3312181b66,left only,exact,wrong,wrong,exact,conflict,conflict,wrong
+715,ab8ddfc2d347e46622cd1d2bd517db3312181b66,left only,conflict,wrong,wrong,exact,conflict,conflict,wrong
+716,ab8ddfc2d347e46622cd1d2bd517db3312181b66,left only,exact,exact,exact,exact,wrong,exact,wrong
+717,ab8ddfc2d347e46622cd1d2bd517db3312181b66,left only,wrong,wrong,wrong,exact,wrong,wrong,wrong
+718,241013e46597fb285a334c966dfa7af9991b5225,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,conflict,wrong
+719,b83625b0ee263ecfe1fa0ceea3439cfcbf843606,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+720,d6ea7853a09493092b1bb2d192f5823b37007994,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,wrong
+721,2d52502932f7e7875f4269e8198e522945bcf696,left only,exact,wrong,wrong,exact,conflict,wrong,wrong
+722,bc9125dc30f2833e4ac24ec01ecf1db7debbbf77,novel (no trivial rule),normalized,wrong,wrong,wrong,wrong,wrong,wrong
+723,bc9125dc30f2833e4ac24ec01ecf1db7debbbf77,novel (no trivial rule),normalized,normalized,normalized,wrong,wrong,wrong,normalized
+724,41bc0309ba863dbff4e537b458048d65f4238312,right only,wrong,exact,exact,wrong,exact,conflict,wrong
+725,a4d77b017980dbe4d731dc090d4cd8cd3c2d9364,right only,exact,normalized,normalized,wrong,exact,wrong,normalized
+726,4f63cd1aed839ff53f4afb6076a74f113d583e40,novel (no trivial rule),normalized,wrong,wrong,wrong,normalized,conflict,wrong
+727,4f63cd1aed839ff53f4afb6076a74f113d583e40,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+728,d28bc96faf3c28942720eaef1a486d601352d2d5,novel (no trivial rule),wrong,normalized,normalized,wrong,wrong,wrong,normalized
+729,d28bc96faf3c28942720eaef1a486d601352d2d5,novel (no trivial rule),wrong,wrong,wrong,wrong,wrong,wrong,exact
+730,c923751783db11df8cb8dc1909ab59605492344c,right only,wrong,exact,exact,wrong,exact,wrong,no_block
+731,c923751783db11df8cb8dc1909ab59605492344c,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+732,c923751783db11df8cb8dc1909ab59605492344c,right only,normalized,wrong,wrong,normalized,exact,exact,normalized
+733,c923751783db11df8cb8dc1909ab59605492344c,right only,exact,exact,exact,wrong,exact,exact,exact
+734,c923751783db11df8cb8dc1909ab59605492344c,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+735,c923751783db11df8cb8dc1909ab59605492344c,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+736,c923751783db11df8cb8dc1909ab59605492344c,right only,exact,exact,exact,wrong,exact,wrong,exact
+737,c923751783db11df8cb8dc1909ab59605492344c,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+738,c923751783db11df8cb8dc1909ab59605492344c,right only,wrong,wrong,wrong,wrong,exact,exact,wrong
+739,c923751783db11df8cb8dc1909ab59605492344c,right only,normalized,normalized,normalized,normalized,exact,wrong,exact
+740,c923751783db11df8cb8dc1909ab59605492344c,right only,normalized,exact,exact,normalized,exact,normalized,exact
+741,c923751783db11df8cb8dc1909ab59605492344c,right only,wrong,wrong,wrong,wrong,exact,no_block,wrong
+742,c923751783db11df8cb8dc1909ab59605492344c,right only,wrong,exact,exact,wrong,exact,conflict,wrong
+743,c923751783db11df8cb8dc1909ab59605492344c,right only,normalized,normalized,normalized,normalized,exact,wrong,wrong
+744,c923751783db11df8cb8dc1909ab59605492344c,right only,wrong,exact,exact,wrong,exact,exact,wrong
+745,c923751783db11df8cb8dc1909ab59605492344c,right only,normalized,exact,exact,normalized,exact,exact,normalized
+746,c923751783db11df8cb8dc1909ab59605492344c,right only,conflict,wrong,wrong,conflict,exact,wrong,wrong
+747,c923751783db11df8cb8dc1909ab59605492344c,right only,conflict,wrong,wrong,conflict,exact,conflict,wrong
+748,87ea390f230ec36969747fc3473a990c8b5f1864,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+749,87ea390f230ec36969747fc3473a990c8b5f1864,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+750,0d580c768d20c5a654b65434c9cbccb9076004ee,concatenation,exact,exact,exact,wrong,wrong,wrong,exact
+751,40d31d67633f703171421ba4d73bb421d89a32db,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+752,40d31d67633f703171421ba4d73bb421d89a32db,right only,exact,normalized,normalized,normalized,exact,normalized,normalized
+753,40d31d67633f703171421ba4d73bb421d89a32db,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+754,40d31d67633f703171421ba4d73bb421d89a32db,right only,normalized,no_block,no_block,wrong,exact,normalized,wrong
+755,608f61b6051d8bd03fd75628c225cccb9c0bedde,right only,wrong,wrong,wrong,wrong,exact,wrong,wrong
+756,cff7c7e6063492e6b52eb7e74b4ea628e8e7ecbc,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+757,67b612c2568b82917bb090cac5046a34462e9d24,novel (no trivial rule),wrong,normalized,normalized,wrong,normalized,no_block,normalized
+758,67b612c2568b82917bb090cac5046a34462e9d24,novel (no trivial rule),normalized,wrong,wrong,normalized,wrong,wrong,wrong
+759,67b612c2568b82917bb090cac5046a34462e9d24,left only,exact,wrong,wrong,exact,wrong,wrong,exact
+760,b471a97a0d79b8743a4aea305aa001474127e1b1,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+761,2d0abace41a98eccdcd180deee15181c7238898d,right only,conflict,wrong,wrong,conflict,exact,wrong,wrong
+762,2d0abace41a98eccdcd180deee15181c7238898d,right only,exact,exact,exact,conflict,exact,conflict,exact
+763,8063e77766d4195dc7c60d5ab8e9f23d50eca9cf,right only,wrong,exact,exact,wrong,exact,wrong,exact
+764,e7ed675fb9763b412458f905c07d274b0ffc12d9,right only,exact,exact,exact,normalized,exact,exact,exact
+765,e7ed675fb9763b412458f905c07d274b0ffc12d9,left only,exact,wrong,wrong,exact,wrong,wrong,wrong
+766,482c3930286a52c8613c46126cd84fa7013db64f,novel (no trivial rule),wrong,wrong,wrong,wrong,normalized,wrong,wrong
+767,482c3930286a52c8613c46126cd84fa7013db64f,right only,exact,wrong,wrong,wrong,exact,exact,exact
+768,003c60654636b9b3dc2f3a0846a8a76a44f1fb06,novel (no trivial rule),exact,wrong,wrong,wrong,wrong,exact,wrong
+769,003c60654636b9b3dc2f3a0846a8a76a44f1fb06,novel (no trivial rule),exact,wrong,wrong,wrong,wrong,exact,wrong
+770,d543609051366758e579ad168361daadd74cdf7f,right only,wrong,exact,exact,wrong,exact,wrong,exact
+771,d543609051366758e579ad168361daadd74cdf7f,right only,wrong,exact,exact,wrong,exact,conflict,wrong
+772,d543609051366758e579ad168361daadd74cdf7f,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+773,d543609051366758e579ad168361daadd74cdf7f,right only,exact,exact,exact,normalized,exact,normalized,exact
+774,d543609051366758e579ad168361daadd74cdf7f,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+775,d543609051366758e579ad168361daadd74cdf7f,right only,normalized,exact,exact,normalized,exact,exact,wrong
+776,d543609051366758e579ad168361daadd74cdf7f,right only,wrong,wrong,wrong,wrong,exact,wrong,normalized
+777,d543609051366758e579ad168361daadd74cdf7f,right only,exact,exact,exact,wrong,exact,wrong,normalized
+778,d543609051366758e579ad168361daadd74cdf7f,right only,wrong,wrong,wrong,wrong,exact,exact,no_block
+779,d543609051366758e579ad168361daadd74cdf7f,right only,wrong,exact,exact,wrong,exact,wrong,wrong
+780,d543609051366758e579ad168361daadd74cdf7f,right only,exact,wrong,wrong,wrong,exact,conflict,wrong
+781,d543609051366758e579ad168361daadd74cdf7f,right only,exact,wrong,wrong,wrong,exact,conflict,exact
+782,d543609051366758e579ad168361daadd74cdf7f,right only,exact,exact,exact,wrong,exact,wrong,exact
+783,d543609051366758e579ad168361daadd74cdf7f,right only,exact,exact,exact,wrong,exact,wrong,exact
+784,d543609051366758e579ad168361daadd74cdf7f,novel (no trivial rule),wrong,no_block,no_block,wrong,wrong,wrong,wrong
+785,d543609051366758e579ad168361daadd74cdf7f,right only,exact,exact,exact,wrong,exact,exact,exact
+786,d543609051366758e579ad168361daadd74cdf7f,right only,exact,exact,exact,wrong,exact,wrong,exact
+787,d543609051366758e579ad168361daadd74cdf7f,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+788,d543609051366758e579ad168361daadd74cdf7f,right only,exact,wrong,wrong,wrong,exact,wrong,wrong
+789,d543609051366758e579ad168361daadd74cdf7f,right only,exact,wrong,wrong,wrong,exact,wrong,no_block
+790,d543609051366758e579ad168361daadd74cdf7f,right only,wrong,wrong,wrong,wrong,exact,exact,wrong
+791,d543609051366758e579ad168361daadd74cdf7f,right only,exact,exact,exact,wrong,exact,wrong,wrong
+792,d543609051366758e579ad168361daadd74cdf7f,right only,wrong,exact,exact,wrong,exact,normalized,exact
+793,d543609051366758e579ad168361daadd74cdf7f,right only,exact,exact,exact,wrong,exact,wrong,exact
+794,d543609051366758e579ad168361daadd74cdf7f,right only,exact,exact,exact,wrong,exact,conflict,exact
+795,d543609051366758e579ad168361daadd74cdf7f,right only,conflict,wrong,wrong,conflict,exact,wrong,wrong
+796,d543609051366758e579ad168361daadd74cdf7f,novel (no trivial rule),conflict,wrong,wrong,conflict,conflict,conflict,wrong
+797,d543609051366758e579ad168361daadd74cdf7f,right only,exact,normalized,normalized,normalized,exact,exact,wrong
+798,d543609051366758e579ad168361daadd74cdf7f,right only,normalized,normalized,normalized,normalized,exact,wrong,exact
+799,d543609051366758e579ad168361daadd74cdf7f,novel (no trivial rule),normalized,wrong,wrong,normalized,wrong,wrong,normalized
+800,d543609051366758e579ad168361daadd74cdf7f,right only,normalized,wrong,wrong,normalized,exact,conflict,wrong
+801,d543609051366758e579ad168361daadd74cdf7f,right only,conflict,wrong,wrong,conflict,exact,conflict,wrong
+802,d543609051366758e579ad168361daadd74cdf7f,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+803,d543609051366758e579ad168361daadd74cdf7f,right only,wrong,wrong,wrong,wrong,exact,conflict,wrong
+804,4ba3d9e6a5cf1f6c0217777e9ce9ebff461cc270,right only,exact,normalized,normalized,normalized,exact,exact,normalized
+805,79c0b6004ae455f981819e1301f023c4a05fe19d,concatenation,exact,exact,exact,wrong,wrong,wrong,exact

@@ -153,3 +153,12 @@ if have_k2 and "qwen_finetuned_r2" in exact:
 else:
     print("\nK2 high on all 806 not complete yet:", len(hl), "of 806")
 (ROOT / "results/level4.json").write_text(json.dumps({"rows": rows, "n_clusters": len(clusters), "comparisons": cmp, "memory": mem, "memory_all": mem_all, "by_gold_type": breakdown, "verdict": verdict}, indent=1))
+
+# --- per-hunk table: ids, merge-SHA cluster, gold hunk type and per-row outcome only (no code), so the CIs / McNemar numbers can be
+# --- re-derived without the data or a GPU: scripts/verify_from_csv.py
+import csv
+cols = list(runs)
+with open(ROOT / "results/level4_per_hunk.csv", "w", newline="") as f:
+    w = csv.writer(f); w.writerow(["id", "merge_sha", "gold_type"] + [f"{c}__bucket" for c in cols])
+    for i in ids:
+        w.writerow([i, cluster[i], types[i]] + [runs[c].get(i, "") for c in cols])

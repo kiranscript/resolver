@@ -178,10 +178,11 @@
    "steady_state_peak_gb": 1.9417,
    "explicit_logits_to_keep_1_peak_gb": 1.9417,
    "nvidia_smi_process_mib_after_first_call": 2539,
-   "source": "kaggle/level4/out/qwen (first call, scored run) and kaggle/level4/out/l4mem/out/memdiag.json (staged diagnostic)"
+   "source": "kaggle/level4/out/qwen (first call, scored run) and kaggle/level4/out/l4mem/out/memdiag.json (staged diagnostic)",
+   "chunked_prefill_128_peak_gb_late_in_same_process": 2.1621
   },
-  "diagnosis": "On the T4 the first generate call in a fresh process has a one-time ~0.3 GB transient (prefill_only_max_new_1: 2.170 GB). Repeated calls peak at 1.942 GB. A forward pass that materialises logits for all 527 prompt positions peaks at 2.152 GB on both GPUs, so full-prompt logits are not what the cold call does (explicit logits_to_keep=1 changed nothing).",
-  "reading": "Weights + adapter 1.85 GB; steady-state inference peak 1.93-1.94 GB (passes < 2 GB, margin 3%); cold first call on a T4 2.17 GB (misses by 8.5%); whole-process GPU memory including the CUDA context is 1.95-2.5 GiB-scale (nvidia-smi 1997 MiB local, 2539 MiB Kaggle)."
+  "diagnosis": "On the T4 the first generate call in a fresh process peaks at 2.170 GB (reproduced to the byte in the scored run and in the diagnostic; cause unidentified, a ~0.3 GB transient above the 1.853 GB load). Repeating the same prompt later peaks at 1.942 GB. A chunked-prefill forward pass late in the same process (new input shapes) peaks at 2.162 GB again, and a forward pass materialising logits for all 527 positions peaks at 2.152 GB on both GPUs, so the transient may re-appear for new shapes: the steady-state figure has only been verified for a repeated identical prompt. Locally (RTX 3050), varied prompts of 201-527 tokens all peak at 1.92-1.94 GB with no first-call transient (reviewer check). Explicit logits_to_keep=1 changed nothing.",
+  "reading": "Weights + adapter 1.85 GB. Steady-state inference peak 1.93-1.94 GB where verified (passes < 2 GB, 3% margin). Cold first call on a T4: 2.17 GB, an 8.5% miss. Whole-process GPU memory including the CUDA context: nvidia-smi 1,997 MiB (= 2.09 GB) locally and 2,539 MiB (= 2.66 GB) on Kaggle, i.e. over 2 GB in decimal units."
  },
  "by_gold_type": {
   "right only": {
