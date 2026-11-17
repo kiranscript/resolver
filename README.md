@@ -14,6 +14,8 @@
 
 **Fine-tune Qwen3.5-2B on about 2.4k conflict hunks, on a free Kaggle T4, and it beats untuned K2-Horizon-3.7B by +10.5 points on Merge-Bench Java, with a pre-registered test and a ~1.94 GB steady-state footprint.**
 
+**A ~60 MB adapter. A 28-percentage-point accuracy gain.** Trained in 26 minutes on a free Kaggle T4, r2 lifts Qwen3.5-2B from 17.0% to 45.0% exact match on Merge-Bench Java. It generates only the replacement lines; a script restores the surrounding code verbatim. The adapter requires the base model, with the complete setup using ~1.94 GB of GPU memory at steady state.
+
 ![Bar chart of exact match on 806 Merge-Bench Java test hunks: Qwen3.5-2B fine-tuned 45.0%, trivial take-right rule 45.7%, K2-Horizon-3.7B best setting 34.5%, trivial take-left rule 33.7%, K2-Horizon-3.7B low effort 28.5%, Qwen3.5-2B untuned 17.0%](docs/results.svg)
 
 ## tl;dr
